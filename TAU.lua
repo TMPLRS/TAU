@@ -799,7 +799,7 @@ end
 ----------------------------------------------------------------------------
 if text == 'تحديث السورس ™' and SudoBot(msg) then 
 os.execute('rm -rf TAU.lua')
-os.execute('wget https://raw.githubusercontent.com/TeamTAU/TAU/master/TAU.lua')
+os.execute('wget https://raw.githubusercontent.com/TMPLRS/TAU/master/TAU.lua')
 send(msg.chat_id_, msg.id_,'♻┋ تم تحديث السورس') 
 dofile('TAU.lua')  
 end
@@ -1951,7 +1951,7 @@ end
 return false
 end
 os.execute('rm -rf TAU.lua')
-os.execute('wget https://raw.githubusercontent.com/TeamTAU/TAU/master/TAU.lua')
+os.execute('wget https://raw.githubusercontent.com/TMPLRS/TAU/master/TAU.lua')
 send(msg.chat_id_, msg.id_,'♻┋ تم تحديث السورس \n👤┋ مــن قـبـل ⊰• ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'TAU')..')') 
 dofile('TAU.lua')  
 end
