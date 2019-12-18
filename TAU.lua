@@ -772,7 +772,7 @@ Text = '\n⚠️| بالتاكيد تم تفعيل البوت الخدمي '
 end
 send(msg.chat_id_, msg.id_,Text) 
 end
-if text == 'تعطيل البوت الخدمي 🔏' and SudoBot(msg) then  
+if text == 'تعطيل البوت الخدمي🔏' and SudoBot(msg) then  
 if not database:get(bot_id..'Free:Bots') then
 database:set(bot_id..'Free:Bots',true) 
 Text = '\n🔘| تم تعطيل البوت الخدمي' 
@@ -3978,7 +3978,7 @@ return false
 end      
 database:sadd(bot_id..'Special:User'..msg.chat_id_, result.id_)
 usertext = '\n👤| العضو » ['..result.title_..'](t.me/'..(username or 'TEAMTAU')..')'
-local  statuss  = '\n🔘| تم ترقيته مميز هنا'
+local  statuss  = '\n??| تم ترقيته مميز هنا'
 texts = usertext..statuss
 else
 texts = '⚠️|لا يوجد حساب بهاذا المعرف'
