@@ -1984,7 +1984,7 @@ Text = [[
 
 📂┇[كليشه التنصيب](https://t.me/TEAMTAU/23) 
 
-📌┇[لــ تواصل](t.me/rrrrybot)
+💬┇[لــ تواصل](t.me/rrrrybot)
 ]]
 send(msg.chat_id_, msg.id_,Text)
 return false
