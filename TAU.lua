@@ -1316,9 +1316,9 @@ local TAU_Msg = database:get(bot_id.."Add:Filter:Rp2"..text..msg.chat_id_)
 if TAU_Msg then    
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
 if data.username_ ~= false then
-send(msg.chat_id_,0,"⚠¦العضو : {["..data.first_name_.."](T.ME/"..data.username_..")}\n📛¦["..TAU_Msg.."] \n") 
+send(msg.chat_id_,0,"⚠┇العضو : {["..data.first_name_.."](T.ME/"..data.username_..")}\n📛┇["..TAU_Msg.."] \n") 
 else
-send(msg.chat_id_,0,"⚠¦العضو : {["..data.first_name_.."](T.ME/TEAMTAU)}\n📛¦["..TAU_Msg.."] \n") 
+send(msg.chat_id_,0,"⚠┇العضو : {["..data.first_name_.."](T.ME/TEAMTAU)}\n📛┇["..TAU_Msg.."] \n") 
 end
 end,nil)   
 DeleteMessage(msg.chat_id_, {[0] = msg.id_})     
@@ -5609,7 +5609,7 @@ end
 if text then  
 local test = database:get(bot_id.."Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_)  
 if test == 'repp' then  
-send(msg.chat_id_, msg.id_,'🔖¦تم منع الكلمه مع التحذير')  
+send(msg.chat_id_, msg.id_,'🔖┇تم منع الكلمه مع التحذير')  
 database:del(bot_id.."Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_)  
 local test = database:get(bot_id.."filtr1:add:reply2"..msg.sender_user_id_..msg.chat_id_)  
 if text then   
@@ -5853,7 +5853,7 @@ end
 if text == 'الصلاحيات' and Mod(msg) then 
 local list = database:smembers(bot_id..'Coomds'..msg.chat_id_)
 if #list == 0 then
-send(msg.chat_id_, msg.id_,'🔖¦لا توجد صلاحيات مضافه')
+send(msg.chat_id_, msg.id_,'🔖┇لا توجد صلاحيات مضافه')
 return false
 end
 t = "\n⛔┇قائمة الصلاحيات المضافه \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n"
@@ -6330,9 +6330,9 @@ local list = TAU.members_
 for k, v in pairs(list) do
 x = x + 1
 if database:get(bot_id..'user:Name'..v.user_id_) then
-t = t..""..x.." ~⪼ ([@"..database:get(bot_id..'user:Name'..v.user_id_).."])\n"
+t = t..""..x.." - {[@"..database:get(bot_id..'user:Name'..v.user_id_).."]}\n"
 else
-t = t..""..x.." ~⪼ ("..v.user_id_..")\n"
+t = t..""..x.." - {"..v.user_id_.."}\n"
 end
 end
 send(msg.chat_id_,msg.id_,t)
@@ -6369,7 +6369,7 @@ end
 if Can_or_NotCan(result.sender_user_id_,msg.chat_id_) ~= false then
 send(msg.chat_id_, msg.id_,"\n🔖┇تم تنزيل الشخص من الرتب التاليه \n📥┇{ "..dev..''..crr..''..cr..''..own..''..mod..''..vip.." } \n")
 else
-send(msg.chat_id_, msg.id_,"\n🚸¦ليس لديه رتب حتى استطيع تنزيله \n")
+send(msg.chat_id_, msg.id_,"\n🚸┇ليس لديه رتب حتى استطيع تنزيله \n")
 end
 if tonumber(SUDO) == tonumber(msg.sender_user_id_) then
 database:srem(bot_id..'Sudo:User', result.sender_user_id_)
@@ -6441,7 +6441,7 @@ end
 text = text..""..k.." >> ("..v..") ~⪼ {"..db.."}\n"
 end
 if #list == 0 then
-text = "📫¦لا يوجد ردود للمطور"
+text = "📫┇لا يوجد ردود للمطور"
 end
 send(msg.chat_id_, msg.id_,'['..text..']')
 end
@@ -6605,7 +6605,7 @@ end
 
 if text == ("ردود المدير") and Manager(msg) then
 local list = database:smembers(bot_id..'List:Manager'..msg.chat_id_..'')
-text = "📑¦قائمه ردود المدير \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n"
+text = "📑┇قائمه ردود المدير \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n"
 for k,v in pairs(list) do
 if database:get(bot_id.."Add:Rd:Manager:Gif"..v..msg.chat_id_) then
 db = 'متحركه 🎭'
@@ -6812,7 +6812,7 @@ if database:get(bot_id..'Left:Bot'..msg.chat_id_) then
 Text = '📫┇تم تفعيل مغادرة البوت'
 database:del(bot_id..'Left:Bot'..msg.chat_id_)  
 else
-Text = '📫¦بالتاكيد تم تفعيل مغادرة البوت'
+Text = '📫┇بالتاكيد تم تفعيل مغادرة البوت'
 end
 send(msg.chat_id_, msg.id_,Text) 
 end
@@ -6821,7 +6821,7 @@ if not database:get(bot_id..'Left:Bot'..msg.chat_id_) then
 Text = '📫┇تم تعطيل مغادرة البوت'
 database:set(bot_id..'Left:Bot'..msg.chat_id_,true)   
 else
-Text = '📫¦بالتاكيد تم تعطيل مغادرة البوت'
+Text = '📫┇بالتاكيد تم تعطيل مغادرة البوت'
 end
 send(msg.chat_id_, msg.id_, Text) 
 end
@@ -8770,9 +8770,9 @@ local TAUbot = database:get(bot_id.."Add:Filter:Rp2"..text..result.chat_id_)
 if TAUbot then    
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
 if data.username_ ~= false then
-send(msg.chat_id_,0,"⚠¦العضو : {["..data.first_name_.."](T.ME/"..data.username_..")}\n📛¦["..TAUbot.."] \n") 
+send(msg.chat_id_,0,"⚠┇العضو : {["..data.first_name_.."](T.ME/"..data.username_..")}\n📛┇["..TAUbot.."] \n") 
 else
-send(msg.chat_id_,0,"⚠¦العضو : {["..data.first_name_.."](T.ME/TEAMTAU)}\n📛¦["..TAUbot.."] \n") 
+send(msg.chat_id_,0,"⚠┇العضو : {["..data.first_name_.."](T.ME/TEAMTAU)}\n📛┇["..TAUbot.."] \n") 
 end
 end,nil)   
 DeleteMessage(msg.chat_id_,{[0] = data.message_id_}) 
