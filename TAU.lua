@@ -1972,19 +1972,15 @@ end
 
 if text == 'السورس' or text == 'سورس' or text == 'يا سورس' then
 Text = [[
-🔘┇اهلا بك في سورس بويكا 
+🔘┇اهلا بك في سورس تاو
 
 🔰┇TAU TEAM
 
-📮┇[قناه السورس](t.me/TEAMTAU) 
+↬   [كليشه التنصيب 💘](https://t.me/TAU/1001)
 
-👮‍♂️┇[مطور السورس الاول](t.me/sajad14p)
+↬   [قناة السورس 🔰](http://t.me/TAUTEAM)
 
-👮‍♂️┇[مطور السورس الثاني](t.me/tofy_6)
-
-📂┇[كليشه التنصيب](https://t.me/TEAMTAU/23) 
-
-💬┇[لــ تواصل](t.me/rrrrybot)
+↬   [تواصل السورس 💌](http://t.me/TAUTEAMBOT) 
 ]]
 send(msg.chat_id_, msg.id_,Text)
 return false
@@ -2211,7 +2207,7 @@ elseif text == 'فتح التثبيت' and msg.reply_to_message_id_ == 0 and Con
 database:del(bot_id.."lockpin"..msg.chat_id_)  
 database:srem(bot_id..'lock:pin',msg.chat_id_)
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👤| بواسطه ← ['..utf8.sub(data.first_name_,0,60)..'](T.ME/'..(data.username_ or 'TEAMTAU')..') \n🔘| تـم فـتح التثبيت هنا ')  
+send(msg.chat_id_, msg.id_,'??| بواسطه ← ['..utf8.sub(data.first_name_,0,60)..'](T.ME/'..(data.username_ or 'TEAMTAU')..') \n🔘| تـم فـتح التثبيت هنا ')  
 end,nil)   
 elseif text == 'فتح التعديل' and msg.reply_to_message_id_ == 0 and Constructor(msg) then 
 database:del(bot_id..'lock:edit'..msg.chat_id_) 
@@ -6206,8 +6202,8 @@ end
 return false
 end
 
-if text == ""..(database:get(bot_id..'Name:Bot') or 'بويكا').."" then  
-Namebot = (database:get(bot_id..'Name:Bot') or 'بويكا')
+if text == ""..(database:get(bot_id..'Name:Bot') or 'تاو').."" then  
+Namebot = (database:get(bot_id..'Name:Bot') or 'تاو')
 local TAU_Msg = {
 'اسمي مينو كول💘؟',
 'دا اشرب جاي مفارغلك',
@@ -6790,7 +6786,7 @@ end
 end
 end
 
-if text == ""..(database:get(bot_id..'Name:Bot') or 'بويكا').." غادر" then  
+if text == ""..(database:get(bot_id..'Name:Bot') or 'تاو').." غادر" then  
 if Sudo(msg) and not database:get(bot_id..'Left:Bot'..msg.chat_id_) then 
 tdcli_function ({ID = "ChangeChatMemberStatus",chat_id_=msg.chat_id_,user_id_=bot_id,status_={ID = "ChatMemberStatusLeft"},},function(e,g) end, nil) 
 send(msg.chat_id_, msg.id_,'📫¦ تم مغادرة المجموعه') 
@@ -6799,7 +6795,7 @@ end
 return false  
 end
 if text == 'بوت' then
-Namebot = (database:get(bot_id..'Name:Bot') or 'بويكا')
+Namebot = (database:get(bot_id..'Name:Bot') or 'تاو')
 send(msg.chat_id_, msg.id_,'اسمي ['..Namebot..'] 💘🌚') 
 end
 if text == 'الاحصائيات' or text == 'المجموعات' or text == 'المشتركين' then
@@ -8508,7 +8504,7 @@ if text and not database:sismember(bot_id..'Spam:Texting'..msg.sender_user_id_,t
 database:del(bot_id..'Spam:Texting'..msg.sender_user_id_) 
 end
 -------------------------------------------------------------------------------------------------------------- 
-local Name_Bot = (database:get(bot_id..'Name:Bot') or 'بويكا')
+local Name_Bot = (database:get(bot_id..'Name:Bot') or 'تاو')
 if text and text:match('^'..Name_Bot..' ') then
 data.message_.content_.text_ = data.message_.content_.text_:gsub('^'..Name_Bot..' ','')
 end
