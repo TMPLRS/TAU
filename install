@@ -22,7 +22,7 @@ sudo chmod +x tg
 lua TAU.lua
 sudo chmod +x TAU
 sudo chmod +x ./TU
-./TU
+./Bk
 }
 if [ "$1" = "install" ]; then
 install
