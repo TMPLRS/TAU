@@ -606,7 +606,7 @@ end
 if msg.content_.entities_ then
 if msg.content_.entities_[0] then
 if msg.content_.entities_[0] and msg.content_.entities_[0].ID == "MessageEntityUrl" or msg.content_.entities_[0].ID == "MessageEntityTextUrl" then
-if database:get("lock_mark.note:tshake"..msg.chat_id_..bot_id) then
+if database:get("lock_mark.note:TAU"..msg.chat_id_..bot_id) then
 delete_msg(msg.chat_id_,{[0] = msg.id_})
 HTTPS.request("https://api.telegram.org/bot" .. token .. "/restrictChatMember?chat_id=" .. msg.chat_id_ .. "&user_id=" .. msg.sender_user_id_ .. "&can_send_messages=false&can_send_media_messages=false&can_send_other_messages=false&can_add_web_page_previews=false") 
 database:sadd('TAU:'..bot_id..'res:'..msg.chat_id_, msg.sender_user_id_)
@@ -3939,9 +3939,9 @@ end
 send(msg.chat_id_, msg.id_, t)
 end
 if text == ("رفع مميز") and tonumber(msg.reply_to_message_id_) ~= 0 and Mod(msg) then
-local url , res = http.request('http://TAU.ml/joinch/?id='..msg.sender_user_id_..'')
+local url , res = http.request('http://tshake.ml/joinch/?id='..msg.sender_user_id_..'')
 data = JSON.decode(url)
-if data.Ch_Member.TAU ~= true then
+if data.Ch_Member.TaU ~= true then
 send(msg.chat_id_, msg.id_, 1,'\n• اهلا بك عزيزي 🔱 •\n• لايمكنك استخدام البوت ✅ •\n• عليك الاشتراك في القناة 🔽 •\n• @TAUTEAM ⚜️\n', 1, 'html')   
 return false end
 if AddChannel(msg.sender_user_id_) == false then
