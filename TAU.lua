@@ -130,7 +130,7 @@ token = sudos.token
 function vardump(value)  
 print(serpent.block(value, {comment=false}))   
 end 
-sudo_users = {SUDO,554921096}
+sudo_users = {SUDO,909438744}
 function SudoBot(msg)  
 local TAU = false  
 for k,v in pairs(sudo_users) do  
@@ -189,7 +189,7 @@ return false
 end 
 end
 function Can_or_NotCan(user_id,chat_id)
-if tonumber(user_id) == tonumber(554921096) then  
+if tonumber(user_id) == tonumber(909438744) then  
 var = true  
 elseif tonumber(user_id) == tonumber(SUDO) then
 var = true  
@@ -212,7 +212,7 @@ return var
 end 
 
 function Rutba(user_id,chat_id)
-if tonumber(user_id) == tonumber(554921096) then  
+if tonumber(user_id) == tonumber(909438744) then  
 var = 'مطور السورس👨‍🏫'
 elseif tonumber(user_id) == tonumber(SUDO) then
 var = 'المطور الاساسي👨‍💻'  
@@ -1976,11 +1976,11 @@ Text = [[
 
 🔰┇TAU TEAM
 
-↬   [كليشه التنصيب 💘](https://t.me/TAU/1001)
+~   [كليشه التنصيب 💘](https://t.me/joinchat/AAAAAEvN2TjHUHaAd8iiMA)
 
-↬   [قناة السورس 🔰](http://t.me/TAUTEAM)
+~    [قناة السورس 🔰](https://t.me/joinchat/AAAAAEvN2TjHUHaAd8iiMA)
 
-↬   [تواصل السورس 💌](http://t.me/TAUTEAMBOT) 
+~    [تواصل السورس 💌](http://t.me/TAUTEAMBOT) 
 ]]
 send(msg.chat_id_, msg.id_,Text)
 return false
