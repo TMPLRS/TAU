@@ -6821,7 +6821,7 @@ if not database:get(bot_id..'Left:Bot'..msg.chat_id_) then
 Text = '🔌┇تم تعطيل مغادرة البوت'
 database:set(bot_id..'Left:Bot'..msg.chat_id_,true)   
 else
-Text = 🔌'┇بالتاكيد تم تعطيل مغادرة البوت'
+Text = '🔌┇بالتاكيد تم تعطيل مغادرة البوت'
 end
 send(msg.chat_id_, msg.id_, Text) 
 end
