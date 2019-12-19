@@ -7177,11 +7177,11 @@ local photps = (taha.total_count_ or 0)
 local interaction = Total_Msg(Msguser)
 local rtpg = rtpa
 local tahaa = {
-"اروح فدوه لحلوين🙊💝",
+"كشخه برب 😉💘",
 "غيرها لزكت بيها🖤😒",
-"فدشي عمي💋💘",
-"دغيرها شبي هاذ😒💔",
-"ببكن حلك 💞😻"
+"ئمنور يلكمر 🌜🧐",
+"اوف حتيت ☹️😻💗",
+"ها ها مغير صورتك 🤣❤️"
 }
 local rdphoto = tahaa[math.random(#tahaa)]
 if not database:get(bot_id..'Bot:Id:Photo'..msg.chat_id_) then      
