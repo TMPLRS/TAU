@@ -5550,7 +5550,7 @@ end
 return false
 end
 database:del(bot_id..'Chek:Welcome'..msg.chat_id_) 
-send(msg.chat_id_, msg.id_,'🔌┇تعطيل الترحيب في المجموعه', 1') 
+send(msg.chat_id_, msg.id_,'🔌┇تم تعطيل الترحيب في المجموعه') 
 return false  
 end
 if text == 'مسح الترحيب' or text == 'حذف الترحيب' then 
