@@ -6340,9 +6340,9 @@ local list = TAU.members_
 for k, v in pairs(list) do
 x = x + 1
 if database:get(bot_id..'user:Name'..v.user_id_) then
-t = t..""..x.." ~⪼ ([@"..database:get(bot_id..'user:Name'..v.user_id_).."])\n"
+t = t..""..x.." - {[@"..database:get(bot_id..'user:Name'..v.user_id_).."]}\n"
 else
-t = t..""..x.." ~⪼ ("..v.user_id_..")\n"
+t = t..""..x.." - {"..v.user_id_.."}\n"
 end
 end
 send(msg.chat_id_,msg.id_,t)
