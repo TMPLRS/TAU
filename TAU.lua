@@ -1778,7 +1778,7 @@ tdcli_function({ID ="GetChat",chat_id_=msg.chat_id_},function(arg,chat)
 if database:sismember(bot_id..'Chek:Groups',msg.chat_id_) then
 send(msg.chat_id_, msg.id_,'🔖┇المجموعه تم تفعيلها من قبل')
 else
-sendText(msg.chat_id_,'\n👤┇بواسطه ← ['..string.sub(result.first_name_,0, 70)..'](tg://user?id='..result.id_..')\n📝┇ تم تفعيل المجموعه {'..chat.title_..'}',msg.id_/2097152/0.5,'md')
+sendText(msg.chat_id_,'\n👤┇بواسطه ← ['..string.sub(result.first_name_,0, 70)..'](tg://user?id='..result.id_..')\n✔┇ تم تفعيل المجموعه {'..chat.title_..'}',msg.id_/2097152/0.5,'md')
 database:sadd(bot_id..'Chek:Groups',msg.chat_id_)
 local Name = '['..result.first_name_..'](tg://user?id='..result.id_..')'
 local NameChat = chat.title_
@@ -1819,7 +1819,7 @@ tdcli_function({ID ="GetChat",chat_id_=msg.chat_id_},function(arg,chat)
 if not database:sismember(bot_id..'Chek:Groups',msg.chat_id_) then
 send(msg.chat_id_, msg.id_,'🔖┇المجموعه تم تطيلها من قبل')
 else
-sendText(msg.chat_id_,'\n👤┇بواسطه ← ['..string.sub(result.first_name_,0, 70)..'](tg://user?id='..result.id_..')\n📌┇تم تعطيل المجموعه {'..chat.title_..'}',msg.id_/2097152/0.5,'md')
+sendText(msg.chat_id_,'\n👤┇بواسطه ← ['..string.sub(result.first_name_,0, 70)..'](tg://user?id='..result.id_..')\n⚠┇تم تعطيل المجموعه {'..chat.title_..'}',msg.id_/2097152/0.5,'md')
 database:srem(bot_id..'Chek:Groups',msg.chat_id_)  
 local Name = '['..result.first_name_..'](tg://user?id='..result.id_..')'
 local NameChat = chat.title_
@@ -6131,7 +6131,7 @@ end
 if text == 'تعطيل التواصل' and SudoBot(msg) then  
 if not database:get(bot_id..'Tuasl:Bots') then
 database:set(bot_id..'Tuasl:Bots',true) 
-Text = '\n📬┇تم تعطيل التواصل' 
+Text = '\n🤷‍♂✔┇تم تعطيل التواصل' 
 else
 Text = '\n📬┇بالتاكيد تم تعطيل التواصل'
 end
@@ -6167,7 +6167,7 @@ return false
 end
 if not database:get(bot_id..'Free:Bots') then
 database:set(bot_id..'Free:Bots',true) 
-Text = '\n📬┇تم تعطيل البوت الخدمي' 
+Text = '\n🤷‍♂✔┇تم تعطيل البوت الخدمي' 
 else
 Text = '\n📬┇بالتاكيد تم تعطيل البوت الخدمي'
 end
@@ -6340,9 +6340,9 @@ local list = TAU.members_
 for k, v in pairs(list) do
 x = x + 1
 if database:get(bot_id..'user:Name'..v.user_id_) then
-t = t..""..x.." - {[@"..database:get(bot_id..'user:Name'..v.user_id_).."]}\n"
+t = t..""..x.." ~⪼ ([@"..database:get(bot_id..'user:Name'..v.user_id_).."])\n"
 else
-t = t..""..x.." - {"..v.user_id_.."}\n"
+t = t..""..x.." ~⪼ ("..v.user_id_..")\n"
 end
 end
 send(msg.chat_id_,msg.id_,t)
@@ -7129,7 +7129,7 @@ end
 if text == 'تعطيل صيح' and Manager(msg) then  
 if not database:get(bot_id..'Seh:User'..msg.chat_id_) then
 database:set(bot_id..'Seh:User'..msg.chat_id_,true)  
-Text = '\n📬┇تم تعطيل امر صيح'
+Text = '\n🤷‍♂✔┇تم تعطيل امر صيح'
 else
 Text = '\n📬┇بالتاكيد تم تعطيل امر صيح'
 end
@@ -7147,7 +7147,7 @@ end
 if text == 'تعطيل اطردني' and Manager(msg) then  
 if not database:get(bot_id..'Cick:Me'..msg.chat_id_) then
 database:set(bot_id..'Cick:Me'..msg.chat_id_,true)  
-Text = '\n📬┇تم تعطيل امر اطردني'
+Text = '\n🤷‍♂✔┇تم تعطيل امر اطردني'
 else
 Text = '\n📬┇بالتاكيد تم تعطيل امر اطردني'
 end
@@ -7815,7 +7815,7 @@ end
 if text == 'تعطيل الالعاب' and Manager(msg) then   
 if database:get(bot_id..'Lock:Games'..msg.chat_id_)  then
 database:del(bot_id..'Lock:Games'..msg.chat_id_) 
-Text = '\n📬┇تم تعطيل الالعاب' 
+Text = '\n🤷‍♂✔┇تم تعطيل الالعاب' 
 else
 Text = '\n📬┇بالتاكيد تم تعطيل الالعاب'
 end
@@ -8485,7 +8485,7 @@ send(msg.chat_id_, msg.id_,Text)
 end
 if text == 'تعطيل الردود' and Manager(msg) then  
 database:set(bot_id..'lock:reply'..msg.chat_id_,true)  
-Text = '\n📬┇تم تعطيل الردود'
+Text = '\n🤷‍♂✔┇تم تعطيل الردود'
 send(msg.chat_id_, msg.id_,Text) 
 end
 if text == 'رابط الحذف' or text == 'رابط حذف' then
