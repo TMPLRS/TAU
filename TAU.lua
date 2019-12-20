@@ -223,13 +223,13 @@ end
 
 function Rutba(user_id,chat_id)
 if tonumber(user_id) == tonumber(909438744) then  
-var = 'مطور السورس👨‍🏫'
+var = 'المطور الاساسي👨‍💻'
 elseif tonumber(user_id) == tonumber(SUDO) then
 var = 'المطور الاساسي👨‍💻'  
 elseif tonumber(user_id) == tonumber(bot_id) then  
 var = 'البوت👷‍♂️'
 elseif database:sismember(bot_id..'Sudo:User', user_id) then
-var = database:get(bot_id.."Sudo:Rd"..msg.chat_id_) or 'المطور👩‍🚒'  
+var = database:get(bot_id.."Sudo:Rd"..msg.chat_id_) or 'مطور البوت 👨🏻‍🔧'  
 elseif database:sismember(bot_id..'Basic:Constructor'..chat_id, user_id) then
 var = database:get(bot_id.."BasicConstructor:Rd"..msg.chat_id_) or 'المنشئ اساسي👩‍🚀'
 elseif database:sismember(bot_id..'Constructor'..chat_id, user_id) then
@@ -3983,7 +3983,7 @@ send(msg.chat_id_,msg.id_,"⚠┇عذرا عزيزي المستخدم هاذا �
 return false 
 end      
 database:sadd(bot_id..'Special:User'..msg.chat_id_, result.id_)
-usertext = '\n👤┇العضو ~⪼ ['..result.title_..'](t.me/'..(username or 'TAUTEAM')..')'
+usertext = '\n??┇العضو ~⪼ ['..result.title_..'](t.me/'..(username or 'TAUTEAM')..')'
 local  statuss  = '\n??┇تم رفعة مميز في البوت'
 texts = usertext..statuss
 else
@@ -7207,12 +7207,12 @@ end
 end
 else
 if result.status_.ID == "UserStatusRecently" and result.profile_photo_ ~= false then
-sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, taha.photos_[0].sizes_[1].photo_.persistent_id_,''..rdphoto..'\n🎟¦ ايديــك • '..msg.sender_user_id_..'\n🎭¦ مـعرفك • '..username..'\n📌¦ موقعـك • '..Rutba(msg.sender_user_id_,msg.chat_id_)..'\n🌄¦ عدد صورك • '..photps..'\n🎲¦ تفاعـلك • '..Total_Msg(Msguser)..'\n💌¦ رسائلك • '..Msguser..'\n👮‍♀️¦ نسبه تفاعلك • '..string.sub(nspatfa, 1,5)..' %\n🧿¦ سحكاتك • '..edit..'\n💎¦مجوهرآتك • '..NUMPGAME..'\n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉')   
+sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, taha.photos_[0].sizes_[1].photo_.persistent_id_,''..rdphoto..'\n🎟¦ ايديك • '..msg.sender_user_id_..'\n🎭¦ معرفك • '..username..'\n📌¦ موقعك • '..Rutba(msg.sender_user_id_,msg.chat_id_)..'\n🌁¦ صورك • '..photps..'\n🎲¦ تفاعلك • '..Total_Msg(Msguser)..'\n💌¦ رسائلك • '..Msguser..'\n👮‍♀️¦ نسبه تفاعل • '..string.sub(nspatfa, 1,5)..' %\n🧿¦ سحكاتك • '..edit..'\n💎¦مجوهرآتك • '..NUMPGAME..'\n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉')   
 else 
 if result.status_.ID == "UserStatusEmpty" and result.profile_photo_ == false then
-send(msg.chat_id_, msg.id_,'[\n🎟¦ ايديــك • '..msg.sender_user_id_..'\n🎭¦ مـعرفك • '..username..'\n📌¦ موقعـك • '..Rutba(msg.sender_user_id_,msg.chat_id_)..'\n🌄¦ عدد صورك • '..photps..'\n🎲¦ تفاعـلك • '..Total_Msg(Msguser)..'\n💌¦ رسائلك • '..Msguser..'\n👮‍♀️¦ نسبه تفاعلك • '..string.sub(nspatfa, 1,5)..' %\n🧿¦ سحكاتك • '..edit..'\n💎¦مجوهرآتك • '..NUMPGAME..']\n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉')   
+send(msg.chat_id_, msg.id_,'[\n🎟¦ ايديك • '..msg.sender_user_id_..'\n🎭¦ معرفك • '..username..'\n📌¦ موقعك • '..Rutba(msg.sender_user_id_,msg.chat_id_)..'\n🌁¦ صورك • '..photps..'\n🎲¦ تفاعلك • '..Total_Msg(Msguser)..'\n💌¦ رسائلك • '..Msguser..'\n👮‍♀️¦ نسبه تفاعل • '..string.sub(nspatfa, 1,5)..' %\n🧿¦ سحكاتك • '..edit..'\n💎¦مجوهرآتك • '..NUMPGAME..']\n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉')   
 else
-send(msg.chat_id_, msg.id_, '\n⚠️┇الصوره ←  ليس لديك صور في حسابك 🍃'..'[\n🎟¦ ايديــك • '..msg.sender_user_id_..'\n🎭¦ مـعرفك • '..username..'\n📌¦ موقعـك • '..Rutba(msg.sender_user_id_,msg.chat_id_)..'\n🌄¦ عدد صورك • '..photps..'\n🎲¦ تفاعـلك • '..Total_Msg(Msguser)..'\n💌¦ رسائلك • '..Msguser..'\n👮‍♀️¦ نسبه تفاعلك • '..string.sub(nspatfa, 1,5)..' %\n🧿¦ سحكاتك • '..edit..'\n💎¦مجوهرآتك • '..NUMPGAME..']\n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉')   
+send(msg.chat_id_, msg.id_, '\n⚠️┇الصوره ←  ليس لديك صور في حسابك 🍃'..'[\n🎟¦ ايديك • '..msg.sender_user_id_..'\n🎭¦ معرفك • '..username..'\n📌¦ موقعك • '..Rutba(msg.sender_user_id_,msg.chat_id_)..'\n🌁¦ صورك • '..photps..'\n🎲¦ تفاعلك • '..Total_Msg(Msguser)..'\n💌¦ رسائلك • '..Msguser..'\n👮‍♀️¦ نسبه تفاعل • '..string.sub(nspatfa, 1,5)..' %\n🧿¦ سحكاتك • '..edit..'\n💎¦مجوهرآتك • '..NUMPGAME..']\n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉')   
 end 
 end
 end
