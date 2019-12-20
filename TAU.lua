@@ -386,29 +386,29 @@ end
 function Total_Msg(msgs)  
 local TAU_Msg = ''  
 if msgs < 100 then 
-TAU_Msg = 'غير متفاعل👻' 
+TAU_Msg = 'غير متفاعل' 
 elseif msgs < 200 then 
-TAU_Msg = 'ممتفاعل👻' 
+TAU_Msg = 'ممتفاعل' 
 elseif msgs < 400 then 
-TAU_Msg = 'سيئ 💥' 
+TAU_Msg = 'سيئ' 
 elseif msgs < 700 then 
-TAU_Msg = 'ممتفاعل🌪' 
+TAU_Msg = 'ممتفاعل' 
 elseif msgs < 1200 then 
-TAU_Msg = 'متفاعل⛄' 
+TAU_Msg = 'متفاعل' 
 elseif msgs < 2000 then 
-TAU_Msg = 'كلش حلو⚡' 
+TAU_Msg = 'كلش حلو' 
 elseif msgs < 3500 then 
-TAU_Msg = 'متفاعل🌪'  
+TAU_Msg = 'متفاعل'  
 elseif msgs < 4000 then 
-TAU_Msg = 'متفاعل نار🔥' 
+TAU_Msg = 'متفاعل نار' 
 elseif msgs < 4500 then 
-TAU_Msg = 'لهب التفاعل🕊' 
+TAU_Msg = 'لهب التفاعل' 
 elseif msgs < 5500 then 
-TAU_Msg = 'اقوه تفاعل🕵' 
+TAU_Msg = 'اقوه تفاعل' 
 elseif msgs < 7000 then 
-TAU_Msg = 'ملك التفاعل🙋' 
+TAU_Msg = 'ملك التفاعل' 
 elseif msgs < 9500 then 
-TAU_Msg = 'متفاعل كلش🤗' 
+TAU_Msg = 'متفاعل كلش' 
 elseif msgs < 10000000000 then 
 TAU_Msg = 'اسد التفاعل'  
 end 
