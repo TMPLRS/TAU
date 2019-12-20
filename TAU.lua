@@ -410,7 +410,7 @@ TAU_Msg = 'ملك التفاعل🙋'
 elseif msgs < 9500 then 
 TAU_Msg = 'متفاعل كلش🤗' 
 elseif msgs < 10000000000 then 
-TAU_Msg = 'اسد التفاعل🐷'  
+TAU_Msg = 'اسد التفاعل'  
 end 
 return TAU_Msg 
 end
