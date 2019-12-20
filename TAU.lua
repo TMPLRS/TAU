@@ -8478,6 +8478,96 @@ local texting = {"وعليكم السلام والرحمه⇣😻","يمه هل�
 send(msg.chat_id_, msg.id_, ''..texting[math.random(#texting)]..'')
 end
 end
+if text == "صباح النور" or text == "صباح الخير" or text == "صباحلخير" then
+if not database:get(bot_id..'lock:reply'..msg.chat_id_) then
+local texting = {"اطلق صباح 💘" }
+send(msg.chat_id_, msg.id_, ''..texting[math.random(#texting)]..'')
+end
+end
+if text == "فديت" or text == "فدوه" or text == "فدوا" then
+if not database:get(bot_id..'lock:reply'..msg.chat_id_) then
+local texting = {"فداك 💘" }
+send(msg.chat_id_, msg.id_, ''..texting[math.random(#texting)]..'')
+end
+end
+if text == "احبك" or text == "احبج" or text == "مح" then
+if not database:get(bot_id..'lock:reply'..msg.chat_id_) then
+local texting = {"عيب🌚💘" }
+send(msg.chat_id_, msg.id_, ''..texting[math.random(#texting)]..'')
+end
+end
+if text == "😐" or text == "😑" then
+if not database:get(bot_id..'lock:reply'..msg.chat_id_) then
+local texting = {"اربط فيشه🌚👋🏻" }
+send(msg.chat_id_, msg.id_, ''..texting[math.random(#texting)]..'')
+end
+end
+if text == "هاي" then
+if not database:get(bot_id..'lock:reply'..msg.chat_id_) then
+local texting = {"اطلق هاي💕" }
+send(msg.chat_id_, msg.id_, ''..texting[math.random(#texting)]..'')
+end
+end
+if text == "اريد اكبل" then
+if not database:get(bot_id..'lock:reply'..msg.chat_id_) then
+local texting = {"سوالف الكوكو عوفها" }
+send(msg.chat_id_, msg.id_, ''..texting[math.random(#texting)]..'')
+end
+end
+if text == "شلونكم" then
+if not database:get(bot_id..'lock:reply'..msg.chat_id_) then
+local texting = {"تمام وانت يكيوت ؟ 💕" }
+send(msg.chat_id_, msg.id_, ''..texting[math.random(#texting)]..'')
+end
+end
+if text == "شكو ماكو" then
+if not database:get(bot_id..'lock:reply'..msg.chat_id_) then
+local texting = {"نسأل عنك يحلو  💘" }
+send(msg.chat_id_, msg.id_, ''..texting[math.random(#texting)]..'')
+end
+end
+if text == "بوت" then
+if not database:get(bot_id..'lock:reply'..msg.chat_id_) then
+local texting = {"عمري تفضل ؟🙁" }
+send(msg.chat_id_, msg.id_, ''..texting[math.random(#texting)]..'')
+end
+end
+if text == "هلو" then
+if not database:get(bot_id..'lock:reply'..msg.chat_id_) then
+local texting = {"هلاوات 🌚👋🏻" }
+send(msg.chat_id_, msg.id_, ''..texting[math.random(#texting)]..'')
+end
+end
+if text == "تعالي خاص" then
+if not database:get(bot_id..'lock:reply'..msg.chat_id_) then
+local texting = {"اجي وياكم 🌝" }
+send(msg.chat_id_, msg.id_, ''..texting[math.random(#texting)]..'')
+end
+end
+if text == "زاحف" then
+if not database:get(bot_id..'lock:reply'..msg.chat_id_) then
+local texting = {"عاشت الاسامي😹" }
+send(msg.chat_id_, msg.id_, ''..texting[math.random(#texting)]..'')
+end
+end
+if text == "اكرهك" then
+if not database:get(bot_id..'lock:reply'..msg.chat_id_) then
+local texting = {"عليك الله حبني 😹" }
+send(msg.chat_id_, msg.id_, ''..texting[math.random(#texting)]..'')
+end
+end
+if text == "نرتبط" then
+if not database:get(bot_id..'lock:reply'..msg.chat_id_) then
+local texting = {"مرتبط وية نفسي🌚👋🏻" }
+send(msg.chat_id_, msg.id_, ''..texting[math.random(#texting)]..'')
+end
+end
+if text == "باي" then
+if not database:get(bot_id..'lock:reply'..msg.chat_id_) then
+local texting = {"باي حبيبي 💘" }
+send(msg.chat_id_, msg.id_, ''..texting[math.random(#texting)]..'')
+end
+end
 if text == 'تفعيل الردود' and Manager(msg) then   
 database:del(bot_id..'lock:reply'..msg.chat_id_)  
 Text = '🤷‍♂✔┇تم تفعيل الردود'
