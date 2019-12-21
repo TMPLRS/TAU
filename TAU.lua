@@ -106,7 +106,7 @@ echo -e "\e[36m"
 done
 ]])  
 file:close()  
-file = io.open("RUN", "w")  
+file = io.open("TU", "w")  
 file:write([[
 #!/usr/bin/env bash
 cd $HOME/TAU
@@ -149,7 +149,7 @@ SUDO = tonumber(sudos.SUDO)
 sudo_users = {SUDO}
 bot_id = sudos.token:match("(%d+)")  
 token = sudos.token 
---- start functions 
+--- start functions ↓
 --------------------------------------------------------------------------------------------------------------
 function vardump(value)  
 print(serpent.block(value, {comment=false}))   
