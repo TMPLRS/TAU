@@ -8,7 +8,7 @@
  ┋ ┋__┋ ┋ ┋___┋ ┋__┋ ┋ ┋_) ┋ ┋____ / ____ \ 
   \_____┋______\____/┋____/┋______/_/    \_\
 --=> تمت برمجة السورس وتطويرهہ‌‏
---==>> بواسطة @YYBYY <<==
+--==>> بواسطة @lllll3l <<==
 -- للمزيد من المعلومات قناتنا @TAU
 
 ]]
@@ -392,31 +392,31 @@ end
 function Total_Msg(msgs)  
 local TAU_Msg = ''  
 if msgs < 100 then 
-TAU_Msg = 'ضعيف 🌪' 
+TAU_Msg = 'ضعيف' 
 elseif msgs < 200 then 
-TAU_Msg = 'غير متفاعل ⚡️' 
+TAU_Msg = 'غير متفاعل' 
 elseif msgs < 400 then 
-TAU_Msg = 'استمر بطل 💫' 
+TAU_Msg = 'استمر بطل' 
 elseif msgs < 700 then 
-TAU_Msg = 'ملك التفاعل 🌙' 
+TAU_Msg = 'ملك التفاعل' 
 elseif msgs < 1200 then 
-TAU_Msg = 'اسد التفاعل ✨' 
+TAU_Msg = 'اسد التفاعل' 
 elseif msgs < 2000 then 
-TAU_Msg = 'اقوى تفاعل 🔥' 
+TAU_Msg = 'اقوى تفاعل' 
 elseif msgs < 3500 then 
-TAU_Msg = 'اجمل تفاعل 💥'  
+TAU_Msg = 'اجمل تفاعل'  
 elseif msgs < 4000 then 
-TAU_Msg = 'تفاعل روعه 🌜' 
+TAU_Msg = 'تفاعل روعه' 
 elseif msgs < 4500 then 
-TAU_Msg = 'التفاعل المثالي ⭐️' 
+TAU_Msg = 'التفاعل المثالي' 
 elseif msgs < 5500 then 
-TAU_Msg = 'اقوى متفاعل 😎' 
+TAU_Msg = 'اقوى متفاعل' 
 elseif msgs < 7000 then 
-TAU_Msg = 'ملك التفاعل 🤹‍♂️' 
+TAU_Msg = 'ملك التفاعل' 
 elseif msgs < 9500 then 
-TAU_Msg = 'امبروطور التفاعل 🧛‍♂️' 
+TAU_Msg = 'امبروطور التفاعل' 
 elseif msgs < 10000000000 then 
-TAU_Msg = 'رب التفاعل 👨‍🚒'  
+TAU_Msg = 'رب التفاعل'  
 end 
 return TAU_Msg 
 end
@@ -1013,7 +1013,7 @@ return false
 end      
 database:sadd(bot_id..'Sudo:User', result.id_)
 usertext = '\n👤┋المستخدم » ['..result.title_..'](t.me/'..(username or 'TAU')..')'
-status  = '\n🔅┋ تم ترقيتهہ‌‏ مطور في البوت'
+status  = '\n🔖┋ تم ترقيتهہ‌‏ مطور في البوت'
 texts = usertext..status
 else
 texts = '✖┋ لا يوجد حساب بهہ‌‏ذا المعرف'
@@ -1038,11 +1038,11 @@ database:sadd(bot_id..'Sudo:User', userid)
 tdcli_function ({ID = "GetUser",user_id_ = userid},function(arg,data) 
 if data.first_name_ then
 usertext = '\n👤┋المستخدم » ['..data.first_name_..'](t.me/'..(data.username_ or 'TAU')..')'
-status  = '\n🔅┋ تم ترقيتهہ‌‏ مطور في البوت'
+status  = '\n🔖┋ تم ترقيتهہ‌‏ مطور في البوت'
 send(msg.chat_id_, msg.id_, usertext..status)
 else
 usertext = '\n👤┋المستخدم » '..userid..''
-status  = '\n🔅┋ تم ترقيتهہ‌‏ مطور في البوت'
+status  = '\n🔖┋ تم ترقيتهہ‌‏ مطور في البوت'
 send(msg.chat_id_, msg.id_, usertext..status)
 end;end,nil)
 return false 
@@ -1087,11 +1087,11 @@ database:srem(bot_id..'Sudo:User', userid)
 tdcli_function ({ID = "GetUser",user_id_ = userid},function(arg,data) 
 if data.first_name_ then
 usertext = '\n👤┋المستخدم » ['..data.first_name_..'](t.me/'..(data.username_ or 'TAU')..')'
-status  = '\n🔅┋ تم تنزيلهہ‌‏ من المطورين'
+status  = '\n🔰┋ تم تنزيلهہ‌‏ من المطورين'
 send(msg.chat_id_, msg.id_, usertext..status)
 else
 usertext = '\n👤┋المستخدم » '..userid..''
-status  = '\n🔅┋ تم تنزيلهہ‌‏ من المطورين'
+status  = '\n🔰┋ تم تنزيلهہ‌‏ من المطورين'
 send(msg.chat_id_, msg.id_, usertext..status)
 end;end,nil)
 return false 
@@ -2003,11 +2003,11 @@ Text = [[
       ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ 
 ↬   [Install source](https://t.me/TAU/1001)
 
-↬   [Channel TAU](http://t.me/TAU)
+↬   [Channel TAU](http://t.me/TAUTEAM)
 
-↬   [Group TAU®](https://t.me/joinchat/GLOSYU6g4O3LbQTRqyEZxg)
+↬   [TWASL TAU ®](https://t.me/ta2bot)
 
-↬   [Developer source](http://t.me/YYBYY) 
+↬   [Developer source](http://t.me/lllll3l) 
 ]]
 send(msg.chat_id_, msg.id_,Text)
 return false
@@ -2979,7 +2979,7 @@ end
 database:sadd(bot_id..'Sudo:User', result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
 usertext = '\n👤┋المستخدم » ['..data.first_name_..'](t.me/'..(data.username_ or 'TAU')..')'
-status  = '\n🔅┋ تم ترقيتهہ‌‏ مطور في البوت'
+status  = '\n🔖┋ تم ترقيتهہ‌‏ مطور في البوت'
 send(msg.chat_id_, msg.id_, usertext..status)
 end,nil)
 end
@@ -3005,7 +3005,7 @@ return false
 end      
 database:sadd(bot_id..'Sudo:User', result.id_)
 usertext = '\n👤┋المستخدم » ['..result.title_..'](t.me/'..(username or 'TAU')..')'
-status  = '\n🔅┋ تم ترقيتهہ‌‏ مطور في البوت'
+status  = '\n🔖┋ تم ترقيتهہ‌‏ مطور في البوت'
 texts = usertext..status
 else
 texts = '✖┋ لا يوجد حساب بهہ‌‏ذا المعرف'
@@ -3030,11 +3030,11 @@ database:sadd(bot_id..'Sudo:User', userid)
 tdcli_function ({ID = "GetUser",user_id_ = userid},function(arg,data) 
 if data.first_name_ then
 usertext = '\n👤┋المستخدم » ['..data.first_name_..'](t.me/'..(data.username_ or 'TAU')..')'
-status  = '\n🔅┋ تم ترقيتهہ‌‏ مطور في البوت'
+status  = '\n🔖┋ تم ترقيتهہ‌‏ مطور في البوت'
 send(msg.chat_id_, msg.id_, usertext..status)
 else
 usertext = '\n👤┋المستخدم » '..userid..''
-status  = '\n🔅┋ تم ترقيتهہ‌‏ مطور في البوت'
+status  = '\n🔖┋ تم ترقيتهہ‌‏ مطور في البوت'
 send(msg.chat_id_, msg.id_, usertext..status)
 end;end,nil)
 return false 
@@ -3053,7 +3053,7 @@ function start_function(extra, result, success)
 database:srem(bot_id..'Sudo:User', result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
 usertext = '\n👤┋المستخدم » ['..data.first_name_..'](t.me/'..(data.username_ or 'TAU')..')'
-status  = '\n🔅┋ تم تنزيلهہ‌‏ من المطورين'
+status  = '\n🔰┋ تم تنزيلهہ‌‏ من المطورين'
 send(msg.chat_id_, msg.id_, usertext..status)
 end,nil)
 end
@@ -3075,7 +3075,7 @@ function start_function(extra, result, success)
 if result.id_ then
 database:srem(bot_id..'Sudo:User', result.id_)
 usertext = '\n👤┋المستخدم » ['..result.title_..'](t.me/'..(username or 'TAU')..')'
-status  = '\n🔅┋ تم تنزيلهہ‌‏ من المطورين'
+status  = '\n🔰┋ تم تنزيلهہ‌‏ من المطورين'
 texts = usertext..status
 else
 texts = '✖┋ لا يوجد حساب بهہ‌‏ذا المعرف'
@@ -3100,11 +3100,11 @@ database:srem(bot_id..'Sudo:User', userid)
 tdcli_function ({ID = "GetUser",user_id_ = userid},function(arg,data) 
 if data.first_name_ then
 usertext = '\n👤┋المستخدم » ['..data.first_name_..'](t.me/'..(data.username_ or 'TAU')..')'
-status  = '\n🔅┋ تم تنزيلهہ‌‏ من المطورين'
+status  = '\n🔰┋ تم تنزيلهہ‌‏ من المطورين'
 send(msg.chat_id_, msg.id_, usertext..status)
 else
 usertext = '\n👤┋المستخدم » '..userid..''
-status  = '\n🔅┋ تم تنزيلهہ‌‏ من المطورين'
+status  = '\n🔰┋ تم تنزيلهہ‌‏ من المطورين'
 send(msg.chat_id_, msg.id_, usertext..status)
 end;end,nil)
 return false 
@@ -3148,7 +3148,7 @@ function start_function(extra, result, success)
 database:sadd(bot_id..'Basic:Constructor'..msg.chat_id_, result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
 usertext = '\n👤┋المستخدم » ['..data.first_name_..'](t.me/'..(data.username_ or 'TAU')..')'
-status  = '\n🔅┋ تم ترقيتهہ‌‏ منشئ اساسي'
+status  = '\n🔖┋ تم ترقيتهہ‌‏ منشئ اساسي'
 send(msg.chat_id_, msg.id_, usertext..status)
 end,nil)
 end
@@ -3174,7 +3174,7 @@ return false
 end      
 database:sadd(bot_id..'Basic:Constructor'..msg.chat_id_, result.id_)
 usertext = '\n👤┋المستخدم » ['..result.title_..'](t.me/'..(username or 'TAU')..')'
-status  = '\n🔅┋ تم ترقيتهہ‌‏ منشئ اساسي'
+status  = '\n🔖┋ تم ترقيتهہ‌‏ منشئ اساسي'
 texts = usertext..status
 else
 texts = '✖┋ لا يوجد حساب بهہ‌‏ذا المعرف'
@@ -3199,11 +3199,11 @@ database:sadd(bot_id..'Basic:Constructor'..msg.chat_id_, userid)
 tdcli_function ({ID = "GetUser",user_id_ = userid},function(arg,data) 
 if data.first_name_ then
 usertext = '\n👤┋المستخدم » ['..data.first_name_..'](t.me/'..(data.username_ or 'TAU')..')'
-status  = '\n🔅┋ تم ترقيتهہ‌‏ منشئ اساسي'
+status  = '\n🔖┋ تم ترقيتهہ‌‏ منشئ اساسي'
 send(msg.chat_id_, msg.id_, usertext..status)
 else
 usertext = '\n👤┋المستخدم » '..userid..''
-status  = '\n🔅┋ تم ترقيتهہ‌‏ منشئ اساسي'
+status  = '\n🔖┋ تم ترقيتهہ‌‏ منشئ اساسي'
 send(msg.chat_id_, msg.id_, usertext..status)
 end;end,nil)
 return false
@@ -3222,7 +3222,7 @@ function start_function(extra, result, success)
 database:srem(bot_id..'Basic:Constructor'..msg.chat_id_, result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
 usertext = '\n👤┋المستخدم » ['..data.first_name_..'](t.me/'..(data.username_ or 'TAU')..')'
-status  = '\n🔅┋ تم تنزيلهہ‌‏ من الاساسيين'
+status  = '\n🔰┋ تم تنزيلهہ‌‏ من الاساسيين'
 send(msg.chat_id_, msg.id_, usertext..status)
 end,nil)
 end
@@ -3244,7 +3244,7 @@ function start_function(extra, result, success)
 if result.id_ then
 database:srem(bot_id..'Basic:Constructor'..msg.chat_id_, result.id_)
 usertext = '\n👤┋المستخدم » ['..result.title_..'](t.me/'..(username or 'TAU')..')'
-status  = '\n🔅┋ تم تنزيلهہ‌‏ من الاساسيين'
+status  = '\n🔰┋ تم تنزيلهہ‌‏ من الاساسيين'
 texts = usertext..status
 else
 texts = '✖┋ لا يوجد حساب بهہ‌‏ذا المعرف'
@@ -3269,11 +3269,11 @@ database:srem(bot_id..'Basic:Constructor'..msg.chat_id_, userid)
 tdcli_function ({ID = "GetUser",user_id_ = userid},function(arg,data) 
 if data.first_name_ then
 usertext = '\n👤┋المستخدم » ['..data.first_name_..'](t.me/'..(data.username_ or 'TAU')..')'
-status  = '\n🔅┋ تم تنزيلهہ‌‏ من الاساسيين'
+status  = '\n🔰┋ تم تنزيلهہ‌‏ من الاساسيين'
 send(msg.chat_id_, msg.id_, usertext..status)
 else
 usertext = '\n👤┋المستخدم » '..userid..''
-status  = '\n🔅┋ تم تنزيلهہ‌‏ من الاساسيين'
+status  = '\n🔰┋ تم تنزيلهہ‌‏ من الاساسيين'
 send(msg.chat_id_, msg.id_, usertext..status)
 end;end,nil)
 return false
@@ -3315,7 +3315,7 @@ function start_function(extra, result, success)
 database:sadd(bot_id..'Constructor'..msg.chat_id_, result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
 usertext = '\n👤┋المستخدم » ['..data.first_name_..'](t.me/'..(data.username_ or 'TAU')..')'
-status  = '\n🔅┋ تم ترقيتهہ‌‏ منشئ'
+status  = '\n🔖┋ تم ترقيتهہ‌‏ منشئ'
 send(msg.chat_id_, msg.id_, usertext..status)
 end,nil)
 end
@@ -3340,7 +3340,7 @@ return false
 end      
 database:sadd(bot_id..'Constructor'..msg.chat_id_, result.id_)
 usertext = '\n👤┋المستخدم » ['..result.title_..'](t.me/'..(username or 'TAU')..')'
-status  = '\n🔅┋ تم ترقيتهہ‌‏ منشئ'
+status  = '\n🔖┋ تم ترقيتهہ‌‏ منشئ'
 texts = usertext..status
 else
 texts = '✖┋ لا يوجد حساب بهہ‌‏ذا المعرف'
@@ -3365,11 +3365,11 @@ database:sadd(bot_id..'Constructor'..msg.chat_id_, userid)
 tdcli_function ({ID = "GetUser",user_id_ = userid},function(arg,data) 
 if data.first_name_ then
 usertext = '\n👤┋المستخدم » ['..data.first_name_..'](t.me/'..(data.username_ or 'TAU')..')'
-status  = '\n🔅┋ تم ترقيتهہ‌‏ منشئ'
+status  = '\n🔖┋ تم ترقيتهہ‌‏ منشئ'
 send(msg.chat_id_, msg.id_, usertext..status)
 else
 usertext = '\n👤┋المستخدم » '..userid..''
-status  = '\n🔅┋ تم ترقيتهہ‌‏ منشئ'
+status  = '\n🔖┋ تم ترقيتهہ‌‏ منشئ'
 send(msg.chat_id_, msg.id_, usertext..status)
 end;end,nil)
 end
@@ -3387,7 +3387,7 @@ function start_function(extra, result, success)
 database:srem(bot_id..'Constructor'..msg.chat_id_, result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
 usertext = '\n👤┋المستخدم » ['..data.first_name_..'](t.me/'..(data.username_ or 'TAU')..')'
-status  = '\n🔅┋ تم تنزيلهہ‌‏ من المنشئين'
+status  = '\n🔰┋ تم تنزيلهہ‌‏ من المنشئين'
 send(msg.chat_id_, msg.id_, usertext..status)
 end,nil)
 end
@@ -3409,7 +3409,7 @@ function start_function(extra, result, success)
 if result.id_ then
 database:srem(bot_id..'Constructor'..msg.chat_id_, result.id_)
 usertext = '\n👤┋المستخدم » ['..result.title_..'](t.me/'..(username or 'TAU')..')'
-status  = '\n🔅┋ تم تنزيلهہ‌‏ من المنشئين'
+status  = '\n🔰┋ تم تنزيلهہ‌‏ من المنشئين'
 texts = usertext..status
 else
 texts = '✖┋ لا يوجد حساب بهہ‌‏ذا المعرف'
@@ -3434,11 +3434,11 @@ database:srem(bot_id..'Constructor'..msg.chat_id_, userid)
 tdcli_function ({ID = "GetUser",user_id_ = userid},function(arg,data) 
 if data.first_name_ then
 usertext = '\n👤┋المستخدم » ['..data.first_name_..'](t.me/'..(data.username_ or 'TAU')..')'
-status  = '\n🔅┋ تم تنزيلهہ‌‏ من المنشئين'
+status  = '\n🔰┋ تم تنزيلهہ‌‏ من المنشئين'
 send(msg.chat_id_, msg.id_, usertext..status)
 else
 usertext = '\n👤┋المستخدم » '..userid..''
-status  = '\n🔅┋ تم تنزيلهہ‌‏ من المنشئين'
+status  = '\n🔰┋ تم تنزيلهہ‌‏ من المنشئين'
 send(msg.chat_id_, msg.id_, usertext..status)
 end;end,nil)
 end
@@ -3478,7 +3478,7 @@ function start_function(extra, result, success)
 database:sadd(bot_id..'Manager'..msg.chat_id_, result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
 usertext = '\n👤┋المستخدم » ['..data.first_name_..'](t.me/'..(data.username_ or 'TAU')..')'
-status  = '\n🔅┋ تم ترقيتهہ‌‏ مدير'
+status  = '\n🔖┋ تم ترقيتهہ‌‏ مدير'
 send(msg.chat_id_, msg.id_, usertext..status)
 end,nil)
 end
@@ -3504,7 +3504,7 @@ return false
 end      
 database:sadd(bot_id..'Manager'..msg.chat_id_, result.id_)
 usertext = '\n👤┋المستخدم » ['..result.title_..'](t.me/'..(username or 'TAU')..')'
-status  = '\n🔅┋ تم ترقيتهہ‌‏ مدير'
+status  = '\n🔖┋ تم ترقيتهہ‌‏ مدير'
 texts = usertext..status
 else
 texts = '✖┋ لا يوجد حساب بهہ‌‏ذا المعرف'
@@ -3530,11 +3530,11 @@ database:sadd(bot_id..'Manager'..msg.chat_id_, userid)
 tdcli_function ({ID = "GetUser",user_id_ = userid},function(arg,data) 
 if data.first_name_ then
 usertext = '\n👤┋المستخدم » ['..data.first_name_..'](t.me/'..(data.username_ or 'TAU')..')'
-status  = '\n🔅┋ تم ترقيتهہ‌‏ مدير'
+status  = '\n🔖┋ تم ترقيتهہ‌‏ مدير'
 send(msg.chat_id_, msg.id_, usertext..status)
 else
 usertext = '\n👤┋المستخدم » '..userid..''
-status  = '\n🔅┋ تم ترقيتهہ‌‏ مدير'
+status  = '\n🔖┋ تم ترقيتهہ‌‏ مدير'
 send(msg.chat_id_, msg.id_, usertext..status)
 end;end,nil)
 return false
@@ -3553,7 +3553,7 @@ function start_function(extra, result, success)
 database:srem(bot_id..'Manager'..msg.chat_id_, result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
 usertext = '\n👤┋المستخدم » ['..data.first_name_..'](t.me/'..(data.username_ or 'TAU')..')'
-status  = '\n🔅┋ تم تنزيلهہ‌‏ من المدراء'
+status  = '\n🔰┋ تم تنزيلهہ‌‏ من المدراء'
 send(msg.chat_id_, msg.id_, usertext..status)
 end,nil)
 end
@@ -3575,7 +3575,7 @@ function start_function(extra, result, success)
 if result.id_ then
 database:srem(bot_id..'Manager'..msg.chat_id_, result.id_)
 usertext = '\n👤┋المستخدم » ['..result.title_..'](t.me/'..(username or 'TAU')..')'
-status  = '\n🔅┋ تم تنزيلهہ‌‏ من المدراء'
+status  = '\n🔰┋ تم تنزيلهہ‌‏ من المدراء'
 texts = usertext..status
 else
 texts = '✖┋ لا يوجد حساب بهہ‌‏ذا المعرف'
@@ -3600,11 +3600,11 @@ database:srem(bot_id..'Manager'..msg.chat_id_, userid)
 tdcli_function ({ID = "GetUser",user_id_ = userid},function(arg,data) 
 if data.first_name_ then
 usertext = '\n👤┋المستخدم » ['..data.first_name_..'](t.me/'..(data.username_ or 'TAU')..')'
-status  = '\n🔅┋ تم تنزيلهہ‌‏ من المدراء'
+status  = '\n🔰┋ تم تنزيلهہ‌‏ من المدراء'
 send(msg.chat_id_, msg.id_, usertext..status)
 else
 usertext = '\n👤┋المستخدم » '..userid..''
-status  = '\n🔅┋ تم تنزيلهہ‌‏ من المدراء'
+status  = '\n🔰┋ تم تنزيلهہ‌‏ من المدراء'
 send(msg.chat_id_, msg.id_, usertext..status)
 end;end,nil)
 return false
@@ -3648,7 +3648,7 @@ end
 database:sadd(bot_id..'Mod:User'..msg.chat_id_, result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
 usertext = '\n👤┋المستخدم » ['..data.first_name_..'](t.me/'..(data.username_ or 'TAU')..')'
-status  = '\n🔅┋ تم ترقيتهہ‌‏ ادمن'
+status  = '\n🔖┋ تم ترقيتهہ‌‏ ادمن'
 send(msg.chat_id_, msg.id_, usertext..status)
 end,nil)
 end
@@ -3678,7 +3678,7 @@ return false
 end      
 database:sadd(bot_id..'Mod:User'..msg.chat_id_, result.id_)
 usertext = '\n👤┋المستخدم » ['..result.title_..'](t.me/'..(username or 'TAU')..')'
-status  = '\n🔅┋ تم ترقيتهہ‌‏ ادمن'
+status  = '\n🔖┋ تم ترقيتهہ‌‏ ادمن'
 texts = usertext..status
 else
 texts = '✖┋ لا يوجد حساب بهہ‌‏ذا المعرف'
@@ -3707,11 +3707,11 @@ database:sadd(bot_id..'Mod:User'..msg.chat_id_, userid)
 tdcli_function ({ID = "GetUser",user_id_ = userid},function(arg,data) 
 if data.first_name_ then
 usertext = '\n👤┋المستخدم » ['..data.first_name_..'](t.me/'..(data.username_ or 'TAU')..')'
-status  = '\n🔅┋ تم ترقيتهہ‌‏ ادمن'
+status  = '\n🔖┋ تم ترقيتهہ‌‏ ادمن'
 send(msg.chat_id_, msg.id_, usertext..status)
 else
 usertext = '\n👤┋المستخدم » '..userid..''
-status  = '\n🔅┋ تم ترقيتهہ‌‏ ادمن'
+status  = '\n🔖┋ تم ترقيتهہ‌‏ ادمن'
 send(msg.chat_id_, msg.id_, usertext..status)
 end;end,nil)
 return false
@@ -3730,7 +3730,7 @@ function start_function(extra, result, success)
 database:srem(bot_id..'Mod:User'..msg.chat_id_, result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
 usertext = '\n👤┋المستخدم » ['..data.first_name_..'](t.me/'..(data.username_ or 'TAU')..')'
-status  = '\n🔅┋ تم تنزيلهہ‌‏ من الادمنيه'
+status  = '\n🔰┋ تم تنزيلهہ‌‏ من الادمنيه'
 send(msg.chat_id_, msg.id_, usertext..status)
 end,nil)
 end
@@ -3752,7 +3752,7 @@ function start_function(extra, result, success)
 if result.id_ then
 database:srem(bot_id..'Mod:User'..msg.chat_id_, result.id_)
 usertext = '\n👤┋المستخدم » ['..result.title_..'](t.me/'..(username or 'TAU')..')'
-status  = '\n🔅┋ تم تنزيلهہ‌‏ من الادمنيه'
+status  = '\n🔰┋ تم تنزيلهہ‌‏ من الادمنيه'
 texts = usertext..status
 else
 texts = '✖┋ لا يوجد حساب بهہ‌‏ذا المعرف'
@@ -3777,11 +3777,11 @@ database:srem(bot_id..'Mod:User'..msg.chat_id_, userid)
 tdcli_function ({ID = "GetUser",user_id_ = userid},function(arg,data) 
 if data.first_name_ then
 usertext = '\n👤┋المستخدم » ['..data.first_name_..'](t.me/'..(data.username_ or 'TAU')..')'
-status  = '\n🔅┋ تم تنزيلهہ‌‏ من الادمنيه'
+status  = '\n🔰┋ تم تنزيلهہ‌‏ من الادمنيه'
 send(msg.chat_id_, msg.id_, usertext..status)
 else
 usertext = '\n👤┋المستخدم » '..userid..''
-status  = '\n🔅┋ تم تنزيلهہ‌‏ من الادمنيه'
+status  = '\n🔰┋ تم تنزيلهہ‌‏ من الادمنيه'
 send(msg.chat_id_, msg.id_, usertext..status)
 end;end,nil)
 return false
@@ -3941,7 +3941,7 @@ function start_function(extra, result, success)
 database:sadd(bot_id..'Special:User'..msg.chat_id_, result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
 usertext = '\n👤┋المستخدم » ['..data.first_name_..'](t.me/'..(data.username_ or 'TAU')..')'
-local  statuss  = '\n🔅┋ تم ترقيتهہ‌‏ مميز هنا '
+local  statuss  = '\n🔖┋ تم ترقيتهہ‌‏ مميز هنا '
 send(msg.chat_id_, msg.id_, usertext..statuss)
 end,nil)
 end
@@ -3971,7 +3971,7 @@ return false
 end      
 database:sadd(bot_id..'Special:User'..msg.chat_id_, result.id_)
 usertext = '\n👤┋المستخدم » ['..result.title_..'](t.me/'..(username or 'TAU')..')'
-local  statuss  = '\n🔅┋ تم ترقيتهہ‌‏ مميز هنا'
+local  statuss  = '\n🔖┋ تم ترقيتهہ‌‏ مميز هنا'
 texts = usertext..statuss
 else
 texts = '✖┋ لا يوجد حساب بهہ‌‏ذا المعرف'
@@ -4001,11 +4001,11 @@ database:sadd(bot_id..'Special:User'..msg.chat_id_, userid)
 tdcli_function ({ID = "GetUser",user_id_ = userid},function(arg,data) 
 if data.first_name_ then
 usertext = '\n👤┋المستخدم » ['..data.first_name_..'](t.me/'..(data.username_ or 'TAU')..')'
-local  statuss  = '\n🔅┋ تم ترقيتهہ‌‏ مميز هنا'
+local  statuss  = '\n🔖┋ تم ترقيتهہ‌‏ مميز هنا'
 send(msg.chat_id_, msg.id_, usertext..statuss)
 else
 usertext = '\n👤┋المستخدم » '..userid..''
-local  statuss  = '\n🔅┋ تم ترقيتهہ‌‏ مميز هنا '
+local  statuss  = '\n🔖┋ تم ترقيتهہ‌‏ مميز هنا '
 send(msg.chat_id_, msg.id_, usertext..statuss)
 end;end,nil)
 return false
@@ -4025,7 +4025,7 @@ function start_function(extra, result, success)
 database:srem(bot_id..'Special:User'..msg.chat_id_, result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
 usertext = '\n👤┋المستخدم » ['..data.first_name_..'](t.me/'..(data.username_ or 'TAU')..')'
-status  = '\n🔅┋ تم تنزيلهہ‌‏ من المميزين'
+status  = '\n🔰┋ تم تنزيلهہ‌‏ من المميزين'
 send(msg.chat_id_, msg.id_, usertext..status)
 end,nil)
 end
@@ -4047,7 +4047,7 @@ function start_function(extra, result, success)
 if result.id_ then
 database:srem(bot_id..'Special:User'..msg.chat_id_, result.id_)
 usertext = '\n👤┋المستخدم » ['..result.title_..'](t.me/'..(username or 'TAU')..')'
-status  = '\n🔅┋ تم تنزيلهہ‌‏ من المميزين'
+status  = '\n🔰┋ تم تنزيلهہ‌‏ من المميزين'
 texts = usertext..status
 else
 texts = '✖┋ لا يوجد حساب بهہ‌‏ذا المعرف'
@@ -4072,11 +4072,11 @@ database:srem(bot_id..'Special:User'..msg.chat_id_, userid)
 tdcli_function ({ID = "GetUser",user_id_ = userid},function(arg,data) 
 if data.first_name_ then
 usertext = '\n👤┋المستخدم » ['..data.first_name_..'](t.me/'..(data.username_ or 'TAU')..')'
-status  = '\n🔅┋ تم تنزيلهہ‌‏ من المميزين'
+status  = '\n🔰┋ تم تنزيلهہ‌‏ من المميزين'
 send(msg.chat_id_, msg.id_, usertext..status)
 else
 usertext = '\n👤┋المستخدم » '..userid..''
-status  = '\n🔅┋ تم تنزيلهہ‌‏ من المميزين'
+status  = '\n🔰┋ تم تنزيلهہ‌‏ من المميزين'
 send(msg.chat_id_, msg.id_, usertext..status)
 end;end,nil)
 return false
@@ -4438,7 +4438,7 @@ else
 https.request("https://api.telegram.org/bot"..token.."/restrictChatMember?chat_id="..msg.chat_id_.."&user_id="..result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
 usertext = '\n👤┋ المستخدم » ['..data.first_name_..'](t.me/'..(data.username_ or 'TAU')..')'
-status  = '\n🚸┋ تم تقييده في المجموعه'
+status  = '\n🚫┋ تم تقييده في المجموعه'
 send(msg.chat_id_, msg.id_, usertext..status)
 end,nil)
 end
@@ -4461,7 +4461,7 @@ return false
 end      
 https.request("https://api.telegram.org/bot"..token.."/restrictChatMember?chat_id="..msg.chat_id_.."&user_id="..result.id_)
 usertext = '\n👤┋ المستخدم » ['..result.title_..'](t.me/'..(username or 'TAU')..')'
-status  = '\n🚸┋ تم تقييده في المجموعه'
+status  = '\n🚫┋ تم تقييده في المجموعه'
 texts = usertext..status
 else
 texts = '⚠┋ لا يوجد حساب بهاذا المعرف'
@@ -4481,11 +4481,11 @@ https.request("https://api.telegram.org/bot" .. token .. "/restrictChatMember?ch
 tdcli_function ({ID = "GetUser",user_id_ = userid},function(arg,data) 
 if data.first_name_ then
 usertext = '\n👤┋ المستخدم » ['..data.first_name_..'](t.me/'..(data.username_ or 'TAU')..')'
-status  = '\n🚸┋ تم تقييده في المجموعه'
+status  = '\n🚫┋ تم تقييده في المجموعه'
 send(msg.chat_id_, msg.id_, usertext..status)
 else
 usertext = '\n👤┋ المستخدم » '..userid..''
-status  = '\n🚸┋ تم تقييده في المجموعه'
+status  = '\n🚫┋ تم تقييده في المجموعه'
 send(msg.chat_id_, msg.id_, usertext..status)
 end;end,nil)
 end
@@ -4497,7 +4497,7 @@ function start_function(extra, result, success)
 https.request("https://api.telegram.org/bot" .. token .. "/restrictChatMember?chat_id=" .. msg.chat_id_ .. "&user_id=" .. result.sender_user_id_ .. "&can_send_messages=True&can_send_media_messages=True&can_send_other_messages=True&can_add_web_page_previews=True")
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
 usertext = '\n👤┋ المستخدم » ['..data.first_name_..'](t.me/'..(data.username_ or 'TAU')..')'
-status  = '\n🚸┋ تم الغاء تقييده'
+status  = '\n☑┋ تم الغاء تقييده'
 send(msg.chat_id_, msg.id_, usertext..status)
 end,nil)
 end
@@ -4511,7 +4511,7 @@ function start_function(extra, result, success)
 if result.id_ then
 https.request("https://api.telegram.org/bot" .. token .. "/restrictChatMember?chat_id=" .. msg.chat_id_ .. "&user_id=" .. result.id_ .. "&can_send_messages=True&can_send_media_messages=True&can_send_other_messages=True&can_add_web_page_previews=True")
 usertext = '\n👤┋ المستخدم » ['..result.title_..'](t.me/'..(username or 'TAU')..')'
-status  = '\n🚸┋ تم الغاء تقييده'
+status  = '\n☑┋ تم الغاء تقييده'
 texts = usertext..status
 else
 texts = '⚠┋ لا يوجد حساب بهاذا المعرف'
@@ -4528,11 +4528,11 @@ https.request("https://api.telegram.org/bot" .. token .. "/restrictChatMember?ch
 tdcli_function ({ID = "GetUser",user_id_ = userid},function(arg,data) 
 if data.first_name_ then
 usertext = '\n👤┋ المستخدم » ['..data.first_name_..'](t.me/'..(data.username_ or 'TAU')..')'
-status  = '\n🚸┋ تم الغاء تقييده'
+status  = '\n☑┋ تم الغاء تقييده'
 send(msg.chat_id_, msg.id_, usertext..status)
 else
 usertext = '\n👤┋ المستخدم » '..userid..''
-status  = '\n🚸┋ تم الغاء تقييده'
+status  = '\n☑┋ تم الغاء تقييده'
 send(msg.chat_id_, msg.id_, usertext..status)
 end;end,nil)
 return false
@@ -4648,7 +4648,7 @@ return false
 end
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
 usertext = '\n👤┋المستخدم » ['..data.first_name_..'](t.me/'..(data.username_ or 'TAU')..')'
-status  = '\n🔅┋ تم رفعهہ‌‏ ادمن بالكروب '
+status  = '\n🔖┋ تم رفعهہ‌‏ ادمن بالكروب '
 send(msg.chat_id_, msg.id_, usertext..status)
 https.request("https://api.telegram.org/bot"..token.."/promoteChatMember?chat_id=" .. msg.chat_id_ .. "&user_id=" ..result.sender_user_id_.."&can_change_info=false&can_delete_messages=false&can_invite_users=True&can_restrict_members=false&can_pin_messages=True&can_promote_members=false")
 end,nil)
@@ -4669,7 +4669,7 @@ send(msg.chat_id_,msg.id_,"✖┋ عذرا عزيزي المستخدم هہ‌�
 return false 
 end      
 usertext = '\n👤┋المستخدم » ['..result.title_..'](t.me/'..(username or 'TAU')..')'
-status  = '\n🔅┋ تم رفعهہ‌‏ ادمن بالكروب '
+status  = '\n🔖┋ تم رفعهہ‌‏ ادمن بالكروب '
 texts = usertext..status
 send(msg.chat_id_, msg.id_, texts)
 https.request("https://api.telegram.org/bot"..token.."/promoteChatMember?chat_id=" .. msg.chat_id_ .. "&user_id=" ..result.id_.."&can_change_info=false&can_delete_messages=false&can_invite_users=True&can_restrict_members=false&can_pin_messages=True&can_promote_members=false")
@@ -4688,7 +4688,7 @@ return false
 end
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
 usertext = '\n👤┋المستخدم » ['..data.first_name_..'](t.me/'..(data.username_ or 'TAU')..')'
-status  = '\n🔅┋ تم تنزيلهہ‌‏ ادمن من الكروب'
+status  = '\n🔰┋ تم تنزيلهہ‌‏ ادمن من الكروب'
 send(msg.chat_id_, msg.id_, usertext..status)
 https.request("https://api.telegram.org/bot"..token.."/promoteChatMember?chat_id=" .. msg.chat_id_ .. "&user_id=" ..result.sender_user_id_.."&can_change_info=false&can_delete_messages=false&can_invite_users=false&can_restrict_members=false&can_pin_messages=false&can_promote_members=false")
 end,nil)
@@ -4709,7 +4709,7 @@ send(msg.chat_id_,msg.id_,"✖┋ عذرا عزيزي المستخدم هہ‌�
 return false 
 end      
 usertext = '\n👤┋المستخدم » ['..result.title_..'](t.me/'..(username or 'TAU')..')'
-status  = '\n🔅┋ تم تنزيلهہ‌‏ ادمن من الكروب'
+status  = '\n🔰┋ تم تنزيلهہ‌‏ ادمن من الكروب'
 texts = usertext..status
 send(msg.chat_id_, msg.id_, texts)
 https.request("https://api.telegram.org/bot"..token.."/promoteChatMember?chat_id=" .. msg.chat_id_ .. "&user_id=" ..result.id_.."&can_change_info=false&can_delete_messages=false&can_invite_users=false&can_restrict_members=false&can_pin_messages=false&can_promote_members=false")
@@ -4730,7 +4730,7 @@ return false
 end
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
 usertext = '\n👤┋المستخدم » ['..data.first_name_..'](t.me/'..(data.username_ or 'TAU')..')'
-status  = '\n🔅┋ تم رفعهہ‌‏ ادمن بالكروب بكل الصلاحيات'
+status  = '\n🔖┋ تم رفعهہ‌‏ ادمن بالكروب بكل الصلاحيات'
 send(msg.chat_id_, msg.id_, usertext..status)
 https.request("https://api.telegram.org/bot"..token.."/promoteChatMember?chat_id=" .. msg.chat_id_ .. "&user_id=" ..result.sender_user_id_.."&can_change_info=True&can_delete_messages=True&can_invite_users=True&can_restrict_members=True&can_pin_messages=True&can_promote_members=True")
 end,nil)
@@ -4751,7 +4751,7 @@ send(msg.chat_id_,msg.id_,"✖┋ عذرا عزيزي المستخدم هہ‌�
 return false 
 end      
 usertext = '\n👤┋المستخدم » ['..result.title_..'](t.me/'..(username or 'TAU')..')'
-status  = '\n🔅┋ تم رفعهہ‌‏ ادمن بالكروب بكل الصلاحيات'
+status  = '\n🔖┋ تم رفعهہ‌‏ ادمن بالكروب بكل الصلاحيات'
 texts = usertext..status
 send(msg.chat_id_, msg.id_, texts)
 https.request("https://api.telegram.org/bot"..token.."/promoteChatMember?chat_id=" .. msg.chat_id_ .. "&user_id=" ..result.id_.."&can_change_info=True&can_delete_messages=True&can_invite_users=True&can_restrict_members=True&can_pin_messages=True&can_promote_members=True")
@@ -4770,7 +4770,7 @@ return false
 end
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
 usertext = '\n👤┋المستخدم » ['..data.first_name_..'](t.me/'..(data.username_ or 'TAU')..')'
-status  = '\n🔅┋ تم تنزيلهہ‌‏ ادمن من الكروب بكل الصلاحيات'
+status  = '\n🔰┋ تم تنزيلهہ‌‏ ادمن من الكروب بكل الصلاحيات'
 send(msg.chat_id_, msg.id_, usertext..status)
 https.request("https://api.telegram.org/bot"..token.."/promoteChatMember?chat_id=" .. msg.chat_id_ .. "&user_id=" ..result.sender_user_id_.."&can_change_info=false&can_delete_messages=false&can_invite_users=false&can_restrict_members=false&can_pin_messages=false&can_promote_members=false")
 end,nil)
@@ -4791,7 +4791,7 @@ send(msg.chat_id_,msg.id_,"✖┋ عذرا عزيزي المستخدم هہ‌�
 return false 
 end      
 usertext = '\n👤┋المستخدم » ['..result.title_..'](t.me/'..(username or 'TAU')..')'
-status  = '\n🔅┋ تم تنزيلهہ‌‏ ادمن من الكروب بكل الصلاحيات'
+status  = '\n🔰┋ تم تنزيلهہ‌‏ ادمن من الكروب بكل الصلاحيات'
 texts = usertext..status
 send(msg.chat_id_, msg.id_, texts)
 https.request("https://api.telegram.org/bot"..token.."/promoteChatMember?chat_id=" .. msg.chat_id_ .. "&user_id=" ..result.id_.."&can_change_info=false&can_delete_messages=false&can_invite_users=false&can_restrict_members=false&can_pin_messages=false&can_promote_members=false")
@@ -6036,8 +6036,8 @@ end
 return false
 end
 
-if text == ""..(database:get(bot_id..'Name:Bot') or 'العالمي').."" then  
-Namebot = (database:get(bot_id..'Name:Bot') or 'العالمي')
+if text == ""..(database:get(bot_id..'Name:Bot') or 'تاو').."" then  
+Namebot = (database:get(bot_id..'Name:Bot') or 'تاو')
 local TAU_Msg = {
 'كافي ترى كرهت اسمي 😤',
 'اهو اجوا الملطلطين 😪😹',
@@ -6624,7 +6624,7 @@ end
 end
 end
 ----------------------------------------------------------------------------
-if text == ""..(database:get(bot_id..'Name:Bot') or 'العالمي').." غادر" or text == 'غادر' then  
+if text == ""..(database:get(bot_id..'Name:Bot') or 'تاو').." غادر" or text == 'غادر' then  
 if Sudo(msg) and not database:get(bot_id..'Left:Bot'..msg.chat_id_) and not SudoBot(msg) then 
 tdcli_function ({ID = "ChangeChatMemberStatus",chat_id_=msg.chat_id_,user_id_=bot_id,status_={ID = "ChatMemberStatusLeft"},},function(e,g) end, nil) 
 send(msg.chat_id_, msg.id_,'☑┋تم مغادرة المجموعه') 
@@ -6633,7 +6633,7 @@ end
 return false  
 end
 if text == 'بوت' then
-Namebot = (database:get(bot_id..'Name:Bot') or 'العالمي')
+Namebot = (database:get(bot_id..'Name:Bot') or 'تاو')
 send(msg.chat_id_, msg.id_,'اسمي ['..Namebot..'] 😌👌') 
 end
 ----------------------------------------------------------------------------
@@ -8500,7 +8500,7 @@ if (text and text == "تفعيل اوامر التحشيش") then
 send(msg.chat_id_, msg.id_, '☑┇تم تفعيل اوامر التحشيش')
 database:del(bot_id.."Fun_Bots:"..msg.chat_id_)
 end
-local Name_Bot = (database:get(bot_id..'Name:Bot') or 'العالمي')
+local Name_Bot = (database:get(bot_id..'Name:Bot') or 'تاو')
 if not database:get(bot_id.."Fun_Bots:"..msg.chat_id_) then
 if text ==  ""..Name_Bot..' شنو رئيك بهذا' and tonumber(msg.reply_to_message_id_) > 0 then     
 function FunBot(extra, result, success) 
@@ -8523,7 +8523,7 @@ if text and text:match('^'..Name_Bot..' ') then
 data.message_.content_.text_ = data.message_.content_.text_:gsub('^'..Name_Bot..' ','')
 end
 -----------------ZAINALABDEEN___________________
-local Name_Bot = (database:get(bot_id..'Name:Bot') or 'العالمي')
+local Name_Bot = (database:get(bot_id..'Name:Bot') or 'تاو')
 if not database:get(bot_id.."Fun_Bots:"..msg.chat_id_) then
 if text ==  ""..Name_Bot..' بوسه' or text ==  ""..Name_Bot..' مصه' and tonumber(msg.reply_to_message_id_) > 0 then     
 function FunBot(extra, result, success) 
