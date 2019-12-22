@@ -796,16 +796,6 @@ Text = '\n🚫┋بالفعل تم تعطيل البوت خدمي'
 end
 send(msg.chat_id_, msg.id_,Text) 
 end
-database:set(bot_id.."Start:Bot",text)  
-send(msg.chat_id_, msg.id_,'📝| تم حفظ كليشه ستارت') 
-database:del(bot_id..'Start:Bots') 
-return false
-end
-if text == 'ضع كليشه ستارت📌' and SudoBot(msg) then 
-database:set(bot_id..'Start:Bots',true) 
-send(msg.chat_id_, msg.id_,'📑| ارسل لي الكليشه الان') 
-return false
-end
 ----------------------------------------------------------------------------
 if text == 'تحديث السورس ™' and SudoBot(msg) then 
 os.execute('rm -rf TAU.lua')
