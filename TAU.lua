@@ -3925,10 +3925,12 @@ end
 send(msg.chat_id_, msg.id_, t)
 end
 if text == ("رفع مميز") and tonumber(msg.reply_to_message_id_) ~= 0 and Mod(msg) then
-local url , res = http.request('http://als-api.000webhostapp.com/join/join.php?user_id='..msg.sender_user_id_..'')
-data = JSON.decode(url)
-if data.result = false then
-send(msg.chat_id_, msg.id_, 1,'\n• اهلا بك عزيزي 🔱 •\n• لايمكنك استخدام البوت ✅ •\n• عليك الاشتراك في القناة 🔽 •\n• @TAUTEAM ⚜️\n', 1, 'html')   
+if AddChannel(msg.sender_user_id_) == false then
+local textchuser = database:get(bot_id..'text:ch:user')
+if textchuser then
+send(msg.chat_id_, msg.id_,'['..textchuser..']')
+else
+send(msg.chat_id_, msg.id_,' • اهلا بك عزيزي 🔱 •\n• لايمكنك استخدام البوت ✅ •\n • عليك الاشتراك في القناة 🔽 •\n• ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
