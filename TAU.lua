@@ -1999,13 +1999,13 @@ end
 ------------------------------------------------------------------
 if text == 'السورس' or text == 'سورس' or text == 'يا سورس' then
 Text = [[
-⚠┇TAU source
+🦁┇TAU Source
       ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ 
-↬   [كليشه التنصيب ♨](https://t.me/joinchat/AAAAAEvN2TjHUHaAd8iiMA)
+↬   [اضغط هنا لتنصيب السورس](https://t.me/joinchat/AAAAAEvN2TjHUHaAd8iiMA)
 
-↬   [قناة السورس 🔰](https://t.me/joinchat/AAAAAEvN2TjHUHaAd8iiMA)
+~   [قناة التحديثات](https://t.me/joinchat/AAAAAEvN2TjHUHaAd8iiMA)
 
-↬   [تواصل السورس 💌](https://t.me/ta2bot)
+~   [تواصل السورس 💌](https://t.me/ta2bot)
 
 ]]
 send(msg.chat_id_, msg.id_,Text)
