@@ -655,7 +655,7 @@ end
 if SudoBot(msg) then
 local bl = '👨‍💻┋اهلا بك عزيزي المطور في اوامر الكيبورد'
 local keyboard = {
-{ضع كليشه ستارت📌',ضع اسم للبوت ©'},
+{'ضع كليشه ستارت📌',ضع اسم للبوت ©'},
 {'تعطيل التواصل ✖️','تفعيل التواصل 🔛'},
 {'الاحصائيات 📈','المطورين 🕹','قائمه العام 📃'},
 {'اذاعه 📌','اذاعه خاص 👤'},
@@ -2220,7 +2220,7 @@ end
 if text == 'فتح الاضافه' and msg.reply_to_message_id_ == 0 and Mod(msg) then 
 database:del(bot_id.."lock:AddMempar"..msg.chat_id_)  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👤┋مــن قـبـل ⊰• ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'TAUTEAM')..') \n⚠┋تـم فتح اضافة الاعضاء ')  
+send(msg.chat_id_, msg.id_,'??┋مــن قـبـل ⊰• ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'TAUTEAM')..') \n⚠┋تـم فتح اضافة الاعضاء ')  
 end,nil)   
 elseif text == 'فتح الدردشه' and msg.reply_to_message_id_ == 0 and Manager(msg) then 
 database:del(bot_id.."lock:text"..msg.chat_id_)  
