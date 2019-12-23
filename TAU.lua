@@ -7049,10 +7049,10 @@ end
 end
 else
 if result.status_.ID == "UserStatusRecently" and result.profile_photo_ ~= false then
-sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, zain.photos_[0].sizes_[1].photo_.persistent_id_,'🖼¦ '..rdphoto..'\n🎟¦ ايديـك • ('..msg.sender_user_id_..')\n🎭¦ مـعرفك • '..username..'\n📌¦ موقعـك • '..Rutba(msg.sender_user_id_,msg.chat_id_)..'\n🏞¦ صورك • '..photps..'\n🎲¦ تفاعـلك • '..Total_Msg(Msguser)..'\n??¦ رسائلك • {'..Msguser..'}\n👮‍♀️¦ سحكاتك • {'..edit..'}\n💎¦مجوهرآتك • {'..NUMPGAME..'}\nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ')   
+sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, zain.photos_[0].sizes_[1].photo_.persistent_id_,'🖼¦ '..rdphoto..'\n🎟¦ ايديـك • ('..msg.sender_user_id_..')\n🎭¦ مـعرفك • '..username..'\n📌¦ موقعـك • '..Rutba(msg.sender_user_id_,msg.chat_id_)..'\n🎲¦ تفاعـلك • '..Total_Msg(Msguser)..'\n💌¦ رسائلك • {'..Msguser..'}\n👮‍♀️¦ سحكاتك • {'..edit..'}\n💎¦مجوهرآتك • {'..NUMPGAME..'}\nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ')   
 else 
 if result.status_.ID == "UserStatusEmpty" and result.profile_photo_ == false then
-send(msg.chat_id_, msg.id_,'[\n🎟¦ ايديـك • ('..msg.sender_user_id_..')\n🎭¦ مـعرفك • '..username..'\n📌¦ موقعـك • '..Rutba(msg.sender_user_id_,msg.chat_id_)..'\n🏞¦ صورك • '..photps..'\n🎲¦ تفاعـلك • '..Total_Msg(Msguser)..'\n💌¦ رسائلك • {'..Msguser..'}\n👮‍♀️¦ سحكاتك • {'..edit..']}\n💎¦مجوهرآتك • {'..NUMPGAME..'}\nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ')   
+send(msg.chat_id_, msg.id_,'[\n🎟¦ ايديـك • ('..msg.sender_user_id_..')\n🎭¦ مـعرفك • '..username..'\n📌¦ موقعـك • '..Rutba(msg.sender_user_id_,msg.chat_id_)..'\n🎲¦ تفاعـلك • '..Total_Msg(Msguser)..'\n💌¦ رسائلك • {'..Msguser..'}\n👮‍♀️¦ سحكاتك • {'..edit..']}\n💎¦مجوهرآتك • {'..NUMPGAME..'}\nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ')   
 else
    
 end 
@@ -7072,7 +7072,7 @@ get_id_text = get_id_text:gsub('#game',NUMPGAME)
 get_id_text = get_id_text:gsub('#photos',photps) 
 send(msg.chat_id_, msg.id_,'['..get_id_text..']')   
 else
-send(msg.chat_id_, msg.id_,'[\n🎟¦ ايديـك • ('..msg.sender_user_id_..')\n🎭¦ مـعرفك • '..username..'\n📌¦ موقعـك • '..Rutba(msg.sender_user_id_,msg.chat_id_)..'\n🏞¦ صورك • '..photps..'\n🎲¦ تفاعـلك • '..Total_Msg(Msguser)..'\n💌¦ رسائلك • {'..Msguser..'}\n👮‍♀️¦ سحكاتك • {'..edit..']}\n💎¦مجوهرآتك • {'..NUMPGAME..'}\nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ')   
+send(msg.chat_id_, msg.id_,'[\n🎟¦ ايديـك • ('..msg.sender_user_id_..')\n🎭¦ مـعرفك • '..username..'\n📌¦ موقعـك • '..Rutba(msg.sender_user_id_,msg.chat_id_)..'\n🎲¦ تفاعـلك • '..Total_Msg(Msguser)..'\n💌¦ رسائلك • {'..Msguser..'}\n👮‍♀️¦ سحكاتك • {'..edit..']}\n💎¦مجوهرآتك • {'..NUMPGAME..'}\nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ')   
 end
 end
 
