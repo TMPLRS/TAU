@@ -5937,6 +5937,15 @@ end
 send(msg.chat_id_, msg.id_,Text) 
 end
 ----------------------------------------------------------
+if text ==('طرد الكل') and is_sudo(msg) then 
+  function m(arg, data) 
+    for k, v in pairs(data.members_) do 
+      kick_user(v.user_id_, msg.chat_id_) 
+ end 
+text = '☑┇تم طرد الحسابات المحذوفه'
+send(msg.chat_id_, msg.id_,Text) 
+  tdcli_function ({ID = "GetChannelMembers",channel_id_ = getChatId(msg.chat_id_).ID,offset_ = 0,limit_ = 1000}, m, nil)
+  end
 if text == 'تفعيل التواصل' and SudoBot(msg) then  
 if database:get(bot_id..'Tuasl:Bots') then
 database:del(bot_id..'Tuasl:Bots') 
