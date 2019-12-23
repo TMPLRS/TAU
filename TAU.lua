@@ -5938,7 +5938,7 @@ send(msg.chat_id_, msg.id_,Text)
 end
 ----------------------------------------------------------
 
-if text == ('طرد الكل') and is_sudo(msg) then 
+if text == 'طرد الكل' and is_sudo(msg) then 
 local function getChatId(chat_id)
   local chat = {}
   local chat_id = tostring(chat_id)
@@ -7069,7 +7069,7 @@ else
 if result.status_.ID == "UserStatusEmpty" and result.profile_photo_ == false then
 send(msg.chat_id_, msg.id_,'['..get_id_text..']')   
 else
-send(msg.chat_id_, msg.id_, '\n🖼¦ ليس لديك صور في حسابك \n['..get_id_text..']')      
+send(msg.chat_id_, msg.id_, '\n??¦ ليس لديك صور في حسابك \n['..get_id_text..']')      
 end 
 end
 else
