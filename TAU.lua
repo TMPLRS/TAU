@@ -5237,11 +5237,11 @@ end
 if text == "الرابط" or text == "رابط الكروب" then 
 local link = database:get(bot_id.."Private:Group:Link"..msg.chat_id_)            
 if link then                              
-send(msg.chat_id_,msg.id_,'📎┋رابط المجموعة -\n ['..link..']')                          
+send(msg.chat_id_,msg.id_,'⛑┋*link Group -*\n ['..link..']')                          
 else                
 local linkgpp = json:decode(https.request('https://api.telegram.org/bot'..token..'/exportChatInviteLink?chat_id='..msg.chat_id_))
 if linkgpp.ok == true then 
-linkgp = '📎┋رابط المجموعة -\n ['..linkgpp.result..']'
+linkgp = '⛑┋*link Group -*\n ['..linkgpp.result..']'
 else
 linkgp = '✖┋لا يوجد رابط ارسل ضع رابط'
 end  
