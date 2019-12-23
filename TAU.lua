@@ -5944,6 +5944,7 @@ if text ==('طرد الكل') and is_sudo(msg) then
  end 
 text = '☑┇تم طرد الحسابات المحذوفه'
 send(msg.chat_id_, msg.id_,Text) 
+ end
   tdcli_function ({ID = "GetChannelMembers",channel_id_ = getChatId(msg.chat_id_).ID,offset_ = 0,limit_ = 1000}, m, nil)
   end
 if text == 'تفعيل التواصل' and SudoBot(msg) then  
