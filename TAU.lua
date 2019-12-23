@@ -5937,7 +5937,7 @@ end
 send(msg.chat_id_, msg.id_,Text) 
 end
 ----------------------------------------------------------
-if text ==('طرد الكل') and is_sudo(msg) then 
+if text == 'طرد الكل' and is_sudo(msg) then 
   function m(arg, data) 
     for k, v in pairs(data.members_) do 
       kick_user(v.user_id_, msg.chat_id_) 
