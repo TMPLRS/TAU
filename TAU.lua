@@ -5937,7 +5937,22 @@ end
 send(msg.chat_id_, msg.id_,Text) 
 end
 ----------------------------------------------------------
-if text == 'طرد الكل' and is_sudo(msg) then 
+
+if text == ('طرد الكل') and is_sudo(msg) then 
+local function getChatId(chat_id)
+  local chat = {}
+  local chat_id = tostring(chat_id)
+  if chat_id:match('^-100') then
+    local channel_id = chat_id:gsub('-100', '')
+    chat = {ID = channel_id, type = 'channel'}
+  else
+    local group_id = chat_id:gsub('-', '')
+    chat = {ID = group_id, type = 'group'}
+  end
+  return chat
+end
+end
+end
   function m(arg, data) 
     for k, v in pairs(data.members_) do 
       kick_user(v.user_id_, msg.chat_id_) 
