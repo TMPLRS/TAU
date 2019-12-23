@@ -801,7 +801,7 @@ dofile('TAU.lua')
 end
 if text == "ضع اسم للبوت ©" and SudoBot(msg) then  
 database:setex(bot_id..'Set:Name:Bot'..msg.sender_user_id_,300,true) 
-send(msg.chat_id_, msg.id_,"☑┋ارسل لي الاسم الان ")  
+send(msg.chat_id_, msg.id_,"📜┋ارسل لي الاسم الان ")  
 return false
 end
 if text == 'الاحصائيات 📈' and SudoBot(msg) then 
@@ -846,22 +846,22 @@ return false
 end
 if text=="اذاعه خاص 👤" and msg.reply_to_message_id_ == 0 and SudoBot(msg) then 
 database:setex(bot_id.."Send:Bc:Pv" .. msg.chat_id_ .. ":" .. msg.sender_user_id_, 600, true) 
-send(msg.chat_id_, msg.id_,"📥┋ارسل لي سواء >> { ملصق, متحركهہ‌‏, صوره, رساله }\n☑┋للخروج ارسل الغاء ") 
+send(msg.chat_id_, msg.id_,"📜┋ارسل لي سواء >> { ملصق, متحركهہ‌‏, صوره, رساله }\n☑┋للخروج ارسل الغاء ") 
 return false
 end 
 if text=="اذاعه 📌" and msg.reply_to_message_id_ == 0 and SudoBot(msg) then 
 database:setex(bot_id.."Send:Bc:Grops" .. msg.chat_id_ .. ":" .. msg.sender_user_id_, 600, true) 
-send(msg.chat_id_, msg.id_,"📥┋ارسل لي سواء >> { ملصق, متحركهہ‌‏, صوره, رساله }\n☑┋للخروج ارسل الغاء ") 
+send(msg.chat_id_, msg.id_,"📜┋ارسل لي سواء >> { ملصق, متحركهہ‌‏, صوره, رساله }\n☑┋للخروج ارسل الغاء ") 
 return false
 end  
 if text=="اذاعه بالتوجيه 🔖" and msg.reply_to_message_id_ == 0  and SudoBot(msg) then 
 database:setex(bot_id.."Send:Fwd:Grops" .. msg.chat_id_ .. ":" .. msg.sender_user_id_, 600, true) 
-send(msg.chat_id_, msg.id_,"📥┋ارسل لي التوجيه الان") 
+send(msg.chat_id_, msg.id_,"📜┋ارسل لي التوجيه الان") 
 return false
 end 
 if text=="اذاعه بالتوجيه خاص 👤" and msg.reply_to_message_id_ == 0  and SudoBot(msg) then 
 database:setex(bot_id.."Send:Fwd:Pv" .. msg.chat_id_ .. ":" .. msg.sender_user_id_, 600, true) 
-send(msg.chat_id_, msg.id_,"📥┋ارسل لي التوجيه الان") 
+send(msg.chat_id_, msg.id_,"📜┋ارسل لي التوجيه الان") 
 return false
 end 
 if text == 'نسخه احتياطيه للمجموعات 🗂' and SudoBot(msg) then 
@@ -2083,7 +2083,7 @@ end
 return false
 end
 database:set(bot_id.."Set:Cmd:Group"..msg.chat_id_..':'..msg.sender_user_id_,'true') 
-send(msg.chat_id_, msg.id_,'☑┋ارسل الامر القديم')  
+send(msg.chat_id_, msg.id_,'📜┋ارسل الامر القديم')  
 return false
 end
 if text == 'حذف امر' or text == 'مسح امر' then 
@@ -2098,7 +2098,7 @@ end
 return false
 end
 database:set(bot_id.."Del:Cmd:Group"..msg.chat_id_..':'..msg.sender_user_id_,'true') 
-send(msg.chat_id_, msg.id_,'☑┋ارسل الامر الذي قمت بوضعهہ‌‏ بدلا عن القديم')  
+send(msg.chat_id_, msg.id_,'📜┋ارسل الامر الذي قمت بوضعهہ‌‏ بدلا عن القديم')  
 return false
 end
 end
@@ -2117,7 +2117,7 @@ return false
 end
 if text and database:get(bot_id.."Set:Cmd:Group"..msg.chat_id_..':'..msg.sender_user_id_) == 'true' then
 database:set(bot_id.."Set:Cmd:Group:New"..msg.chat_id_,text)
-send(msg.chat_id_, msg.id_,'☑┋ارسل الامر الجديد')  
+send(msg.chat_id_, msg.id_,'📜┋ارسل الامر الجديد')  
 database:del(bot_id.."Set:Cmd:Group"..msg.chat_id_..':'..msg.sender_user_id_)
 database:set(bot_id.."Set:Cmd:Group1"..msg.chat_id_..':'..msg.sender_user_id_,'true1') 
 return false
@@ -5288,7 +5288,7 @@ end
 if text == 'ضع وصف' or text == 'وضع وصف' then  
 if Mod(msg) then
 database:setex(bot_id.."Set:Description" .. msg.chat_id_ .. "" .. msg.sender_user_id_, 120, true)  
-send(msg.chat_id_, msg.id_,'📥┋ارسل الان الوصف')
+send(msg.chat_id_, msg.id_,'📜┋ارسل الان الوصف')
 end
 return false  
 end
@@ -6028,7 +6028,7 @@ end
 return false
 end
 database:setex(bot_id..'Set:Name:Bot'..msg.sender_user_id_,300,true) 
-send(msg.chat_id_, msg.id_,"☑┋ارسل لي الاسم الان ")  
+send(msg.chat_id_, msg.id_,"📜┋ارسل لي الاسم الان ")  
 end
 return false
 end
@@ -6080,7 +6080,7 @@ end
 return false
 end
 database:setex(bot_id.."Send:Bc:Grops" .. msg.chat_id_ .. ":" .. msg.sender_user_id_, 600, true) 
-send(msg.chat_id_, msg.id_,"📥┋ارسل لي سواء >> { ملصق, متحركهہ‌‏, صوره, رساله }\n☑┋للخروج ارسل الغاء ") 
+send(msg.chat_id_, msg.id_,"📜┋ارسل لي سواء >> { ملصق, متحركهہ‌‏, صوره, رساله }\n☑┋للخروج ارسل الغاء ") 
 return false
 end  
 if text=="اذاعه بالتوجيه" and msg.reply_to_message_id_ == 0  and Sudo(msg) then 
@@ -6098,7 +6098,7 @@ end
 return false
 end
 database:setex(bot_id.."Send:Fwd:Grops" .. msg.chat_id_ .. ":" .. msg.sender_user_id_, 600, true) 
-send(msg.chat_id_, msg.id_,"📥┋ارسل لي التوجيه الان") 
+send(msg.chat_id_, msg.id_,"📜┋ارسل لي التوجيه الان") 
 return false
 end 
 if text=="اذاعه بالتوجيه خاص" and msg.reply_to_message_id_ == 0  and Sudo(msg) then 
@@ -6116,7 +6116,7 @@ end
 return false
 end
 database:setex(bot_id.."Send:Fwd:Pv" .. msg.chat_id_ .. ":" .. msg.sender_user_id_, 600, true) 
-send(msg.chat_id_, msg.id_,"📥┋ارسل لي التوجيه الان") 
+send(msg.chat_id_, msg.id_,"📜┋ارسل لي التوجيه الان") 
 return false
 end 
 ----------------------------------------------------------
@@ -6163,8 +6163,6 @@ for k, v in pairs(list) do
 x = x + 1
 if database:get(bot_id..'user:Name'..v.user_id_) then
 t = t.."|"..x.."| ~⪼ {[@"..database:get(bot_id..'user:Name'..v.user_id_).."]}\n"
-else
-t = t.."|"..x.."| ~⪼ {"..v.user_id_.."}\n"
 end
 end
 send(msg.chat_id_,msg.id_,t)
@@ -6328,7 +6326,7 @@ end
 end
 if text and text:match("^(.*)$") then
 if database:get(bot_id..'Set:Rd'..msg.sender_user_id_..':'..msg.chat_id_) == 'true' then
-send(msg.chat_id_, msg.id_,'📥┋ارسل الرد الذي تريدهہ‌‏ سواء كان { متحركه ‹› ملصق ‹› صوره ‹› اغنيه ‹› بصمه ‹› ملف ‹› فيديو }')
+send(msg.chat_id_, msg.id_,'📜┋ارسل الرد الذي تريدهہ‌‏ سواء كان { متحركه ‹› ملصق ‹› صوره ‹› اغنيه ‹› بصمه ‹› ملف ‹› فيديو }')
 database:set(bot_id..'Set:Rd'..msg.sender_user_id_..':'..msg.chat_id_, 'true1')
 database:set(bot_id..'Text:Sudo:Bot'..msg.sender_user_id_..':'..msg.chat_id_, text)
 database:sadd(bot_id..'List:Rd:Sudo', text)
@@ -6357,7 +6355,7 @@ send(msg.chat_id_, msg.id_,' • اهلا بك عزيزي 🔱 •\n• لايم
 end
 return false
 end
-send(msg.chat_id_, msg.id_,'📥┋ارسل الكلمهہ‌‏ التري تريد اضافتها')
+send(msg.chat_id_, msg.id_,'📜┋ارسل الكلمهہ‌‏ التري تريد اضافتها')
 database:set(bot_id..'Set:Rd'..msg.sender_user_id_..':'..msg.chat_id_,true)
 return false 
 end
@@ -6371,7 +6369,7 @@ send(msg.chat_id_, msg.id_,' • اهلا بك عزيزي 🔱 •\n• لايم
 end
 return false
 end
-send(msg.chat_id_, msg.id_,'☑┋ارسل الكلمهہ‌‏ التري تريد حذفها')
+send(msg.chat_id_, msg.id_,'📜┋ارسل الكلمهہ‌‏ التري تريد حذفها')
 database:set(bot_id..'Set:On'..msg.sender_user_id_..':'..msg.chat_id_,true)
 return false 
 end
@@ -6515,7 +6513,7 @@ end
 end
 if text and text:match("^(.*)$") then
 if database:get(bot_id..'Set:Manager:rd'..msg.sender_user_id_..':'..msg.chat_id_) == 'true' then
-send(msg.chat_id_, msg.id_,'📥┋ارسل الرد الذي تريدهہ‌‏ سواء كان { متحركه ‹› ملصق ‹› صوره ‹› اغنيه ‹› بصمه ‹› ملف ‹› فيديو }')
+send(msg.chat_id_, msg.id_,'📜┋ارسل الرد الذي تريدهہ‌‏ سواء كان { متحركه ‹› ملصق ‹› صوره ‹› اغنيه ‹› بصمه ‹› ملف ‹› فيديو }')
 database:set(bot_id..'Set:Manager:rd'..msg.sender_user_id_..':'..msg.chat_id_,'true1')
 database:set(bot_id..'Text:Manager'..msg.sender_user_id_..':'..msg.chat_id_, text)
 database:del(bot_id.."Add:Rd:Manager:Gif"..text..msg.chat_id_)   
