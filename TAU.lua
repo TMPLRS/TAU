@@ -665,7 +665,7 @@ local start = database:get(bot_id.."Start:Bot")
 if start then 
 DevTAUr = start
 else
-DevTAUr = '🌐┋مرحبا بك في بوت الحمايه'..'\n🎫┋آنا آختصاصي حمايه المجموعات'..'\n📛┋مـن آلسـبآم وآلتوجيهہ‌‏ وآلتگرآر وآلخ...'..'\n\n📨┋ارسل ما تريد وسارسله الى المطور'..'\n\n📡┋[Channel TAU](t.me/TAUTEAM)'
+DevTAUr = '📌┇ مرحبا عزيزي'..'\n📮┇ آنا بوت حماية آلمجموعات'..'\n📫┇ اضفني آلى مجموعتك'..'\n📥┇قم برفعي آدمن وآرسل » { تفعيل }'..'\n🔖┇سئقوم برفع آلمنشئ وآ الادمنيه تلقائي'..'\n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉'..'\n📡┇[Ch ~⪼ TAU TEAM](https://t.me/joinchat/AAAAAEvN2TjHUHaAd8iiMA)'
 end 
 send(msg.chat_id_, msg.id_, DevTAUr) 
 end
@@ -6036,11 +6036,12 @@ end
 if text == ""..(database:get(bot_id..'Name:Bot') or 'تاو').."" then  
 Namebot = (database:get(bot_id..'Name:Bot') or 'تاو')
 local TAU_Msg = {
-'• تّٰفِٰـضـﮧلْٰ حٌٰبٌِٰـہيَٰ 🌚💫ֆ',
+'صاعد اتصال ويا الحب دقيقة وجيك 😘💘',
 'لابسك لتلح',
 'كول ضلعي',
 'مشغول حالياً 🌚🌸',
-'لك اني '..Namebot..' اسمي'
+'ها يحلو كول 💘',
+'يابعد روح 💘 '..Namebot..'كول حب'
 }
 send(msg.chat_id_, msg.id_,'['..TAU_Msg[math.random(#TAU_Msg)]..']') 
 return false
@@ -6155,15 +6156,15 @@ return false
 end
 tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 200
 },function(ta,TAU)
-local t = "\n📃┋قائمة الاعضاء \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n"
+local t = "\n👨‍👧‍👦 ┇ قائمه الاعضاء   ، \nꔹ┉♦️┉ ┉ ┉ ┉♦️┉ꔹ\n"
 x = 0
 local list = TAU.members_
 for k, v in pairs(list) do
 x = x + 1
 if database:get(bot_id..'user:Name'..v.user_id_) then
-t = t..""..x.." - {[@"..database:get(bot_id..'user:Name'..v.user_id_).."]}\n"
+t = t.."|"..x.."| ~⪼ {[@"..database:get(bot_id..'user:Name'..v.user_id_).."]}\n"
 else
-t = t..""..x.." - {"..v.user_id_.."}\n"
+t = t.."|"..x.."| ~⪼ {"..v.user_id_.."}\n"
 end
 end
 send(msg.chat_id_,msg.id_,t)
@@ -6630,7 +6631,7 @@ return false
 end
 if text == 'بوت' then
 Namebot = (database:get(bot_id..'Name:Bot') or 'تاو')
-send(msg.chat_id_, msg.id_,'اسمي ['..Namebot..'] 😌👌') 
+send(msg.chat_id_, msg.id_,'اسمي ['..Namebot..'] 🌸🌚') 
 end
 ----------------------------------------------------------------------------
 if text == 'الاحصائيات' or text == 'المجموعات' or text == 'المشتركين' then
@@ -6786,7 +6787,7 @@ local edit = tonumber(database:get(bot_id..'edits'..msg.chat_id_..result.sender_
 local rtp = Rutba(result.sender_user_id_,msg.chat_id_)
 local username = ('[@'..data.username_..']' or 'لا يوجد')
 local iduser = result.sender_user_id_
-send(msg.chat_id_, msg.id_,'🎟┋ايديهہ‌‏ ~⪼ ('..iduser..')\n🎫┋معرفهہ‌‏ ~⪼ ('..username..')\n👨‍🎓┋رتبتهہ‌‏ ~⪼ ('..rtp..')\n🗑┋تعديلاتهہ‌‏ ~⪼ ('..edit..')\n🤹‍♂️┋مجوهراتهہ‌‏ ~⪼ ('..NUMPGAME..')\n📞┋جهاتهہ‌‏ ~⪼ ('..Contact..')\n📨┋رسائلهہ‌‏ ~⪼ ('..Msguser..')')
+send(msg.chat_id_, msg.id_,'🎟¦ الايـدي • (`'..iduser..'`)\n🎭¦ المعـرف • `'..username..'`\n👮‍♀️¦ الرتـبه • '..rtp..'\n🗑¦ عدد السحكات • (`'..edit..'`)\n💌¦ عدد الرسائل • (`'..Msguser..'`)\n💎¦ عدد المجوهرات • (`'..NUMPGAME..'`)\n👤¦ عدد الجهات • (`'..Contact..'`)\nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ')
 end,nil)
 end
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, start_function, nil)
@@ -6803,7 +6804,7 @@ local edit = tonumber(database:get(bot_id..'edits'..msg.chat_id_..result.id_) or
 local rtp = Rutba(result.id_,msg.chat_id_)
 local username = ('[@'..data.username_..']' or 'لا يوجد')
 local iduser = result.id_
-send(msg.chat_id_, msg.id_,'🎟┋ايديهہ‌‏ ~⪼ ('..iduser..')\n🎫┋معرفهہ‌‏ ~⪼ ('..username..')\n👨‍🎓┋رتبتهہ‌‏ ~⪼ ('..rtp..')\n🗑┋تعديلاتهہ‌‏ ~⪼ ('..edit..')\n🤹‍♂️┋مجوهراتهہ‌‏ ~⪼ ('..NUMPGAME..')\n📞┋جهاتهہ‌‏ ~⪼ ('..Contact..')\n📨┋رسائلهہ‌‏ ~⪼ ('..Msguser..')')
+send(msg.chat_id_, msg.id_,'🎟¦ الايـدي • (`'..iduser..'`)\n🎭¦ المعـرف • `'..username..'`\n👮‍♀️¦ الرتـبه • '..rtp..'\n🗑¦ عدد السحكات • (`'..edit..'`)\n💌¦ عدد الرسائل • (`'..Msguser..'`)\n💎¦ عدد المجوهرات • (`'..NUMPGAME..'`)\n👤¦ عدد الجهات • (`'..Contact..'`)\nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ')
 end,nil)
 else
 send(msg.chat_id_, msg.id_,'✖┋المعرف غير صحيح ')
@@ -6814,7 +6815,7 @@ end
 ----------------------------------------------------------------------------
 if text == 'رتبتي' then
 local rtp = Rutba(msg.sender_user_id_,msg.chat_id_)
-send(msg.chat_id_, msg.id_,'👨‍🎓┋رتبتك في البوت ~⪼ '..rtp)
+send(msg.chat_id_, msg.id_,'👨‍🎓┋رتبتك ~⪼ '..rtp)
 end
 ----------------------------------------------------------------------------
 if text == "اسمي"  then 
