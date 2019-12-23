@@ -7005,7 +7005,7 @@ rtpa = 'منشئ'
 elseif da.status_.ID == "ChatMemberStatusEditor" then 
 rtpa = 'مشرف' 
 elseif da.status_.ID == "ChatMemberStatusMember" then 
-rtpa = 'عضو'
+rtpa = 'عضو 👶🏻'
 end
 local Msguser = tonumber(database:get(bot_id..'Msg_User'..msg.chat_id_..':'..msg.sender_user_id_) or 1) 
 local Contact = tonumber(database:get(bot_id..'Add:Contact'..msg.chat_id_..':'..msg.sender_user_id_) or 0) 
@@ -7942,7 +7942,7 @@ local Num = database:get(bot_id..'NUM:GAMES'..msg.chat_id_..msg.sender_user_id_)
 if Num == 0 then 
 Text = '✖┋لم تلعب اي لعبهہ‌‏ للحصول على مجوهرات'
 else
-Text = '🤹‍♂️┋عدد مجوهرات التي رحبتها هہ‌‏ي *~⪼ { '..Num..' } مجوهہ‌‏رهہ‌‏ *'
+Text = '🤹‍♂️┋عدد مجوهرات التي ربحتها هہ‌‏ي *~⪼ { '..Num..' } مجوهہ‌‏رهہ‌‏ *'
 end
 send(msg.chat_id_, msg.id_,Text) 
 end
