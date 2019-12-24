@@ -3606,6 +3606,21 @@ send(msg.chat_id_, msg.id_, usertext..status)
 end;end,nil)
 return false
 end
+
+if text == ("رفع الادمنيه") then
+local function cb(extra,result,success)
+local list = result.members_
+moody = '📊┇ تم رفع ادمنيه المجموعه في البوت\n'
+local n = 0
+for k,v in pairs(list) do
+n = (n + 1)
+local hash =  'TAU:'..bot_id..'mods:'..msg.chat_id_
+database:sadd(hash, v.user_id_)
+end
+send(msg.chat_id_, msg.id_, 1, moody, 1, 'html')
+end
+bot.channel_get_admins(msg.chat_id_,cb)
+end
 ------------------------------------------------------------------------
 if text == 'مسح الادمنيه' and Manager(msg) then
 database:del(bot_id..'Mod:User'..msg.chat_id_)
