@@ -3610,14 +3610,14 @@ end
 if text == ("رفع الادمنيه") then
 local function cb(extra,result,success)
 local list = result.members_
-moody = '📊┇ تم رفع ادمنيه المجموعه في البوت\n'
+mod = '📊┇ تم رفع ادمنيه المجموعه في البوت\n'
 local n = 0
 for k,v in pairs(list) do
 n = (n + 1)
-local hash =  'TAU:'..bot_id..'mods:'..msg.chat_id_
-database:sadd(hash, v.user_id_)
+local username =  database:get(bot_id.."mod" .. v)
+database:sadd(mod, v.user_id_)
 end
-send(msg.chat_id_, msg.id_, 1, moody, 1, 'html')
+send(msg.chat_id_, msg.id_, 1, mod, 1, 'html')
 end
 bot.channel_get_admins(msg.chat_id_,cb)
 end
