@@ -1768,20 +1768,6 @@ database:sadd(bot_id..'Muted:User'..msg.chat_id_,msg.sender_user_id_)
 DeleteMessage(msg.chat_id_,{[0] = msg.id_}) 
 end
 end
-if msg.content_.ID == "MessageChatJoinByLink" then
-if database:get("lock_kansers:bot_id"..msg.chat_id_..bot_id) then
-tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-local last_ = data.last_name_ or ''
-local first_ = data.first_name_ or ''
-taha = (first_..''..last_)
-Num = (database:get(bot_id..'Num:kansers'..msg.chat_id_) or 25)
-if string.len(taha) > tonumber(Num) then
-send(msg.chat_id_, msg.id_, 1,'📛┇ عذرا غير مرحب بك هنا',1')
-chat_kick(msg.chat_id_, msg.sender_user_id_)
-end
-end,nil)   
-return false
-end
 if text == 'تفعيل' and Sudo(msg) then
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
@@ -1948,11 +1934,6 @@ return false
 end
 database:set(bot_id..'Num:Add:Bot',Num) 
 send(msg.chat_id_, msg.id_,'📌┋تم تعيين عدد الاعضاء سيتم تفعيل المجموعات التي اعضائها اكثر من  >> {'..Num..'} عضو')
-end
-if text and text:match('^وضع عدد الكانسر (%d+)$') and Constructor(msg) then
-local Num = text:match('^وضع عدد الكانسر (%d+)$')
-database:set(bot_id..'Num:add:kansers',Num)
-send(msg.chat_id_, msg.id_,'📌┋تم تعينن عدد الاحرف')
 end
 if text == 'تحديث السورس' and SudoBot(msg) then 
 if AddChannel(msg.sender_user_id_) == false then
@@ -2164,11 +2145,6 @@ database:set(bot_id.."lock:Join"..msg.chat_id_,'kick')
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
 send(msg.chat_id_, msg.id_,'👤┋بواسطه ~ ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'TAUTEAM')..')\n🔐┋تـم قفـل دخول الاعضاء ')  
 end,nil)   
-elseif text == 'قفل الكانسر' and msg.reply_to_message_id_ == 0 and Mod(msg) then 
-database:set(bot_id.."lock_kansers"..msg.chat_id_,'kick')  
-tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👤┋بواسطه ~ ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'TAUTEAM')..')\n🔐┋تـم قفـل الكانسر ')  
-end,nil)
 elseif text == 'قفل البوتات' and msg.reply_to_message_id_ == 0 and Mod(msg) then 
 database:set(bot_id.."lock:Bot:kick"..msg.chat_id_,'del')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
@@ -2235,11 +2211,6 @@ elseif text == 'فتح الدخول' and msg.reply_to_message_id_ == 0 and Mod(m
 database:del(bot_id.."lock:Join"..msg.chat_id_)  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
 send(msg.chat_id_, msg.id_,'👤┋بواسطه ~ ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'TAUTEAM')..') \n⚠┋تـم فتح دخول الاعضاء ')  
-end,nil)   
-elseif text == 'فتح الكانسر' and msg.reply_to_message_id_ == 0 and Mod(msg) then 
-database:del(bot_id.."lock_kansers"..msg.chat_id_)  
-tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👤┋بواسطه ~ ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'TAUTEAM')..') \n⚠┋تـم فتح الكانسر ')  
 end,nil)   
 elseif text == 'فتح البوتات' and msg.reply_to_message_id_ == 0 and Mod(msg) then 
 database:del(bot_id.."lock:Bot:kick"..msg.chat_id_)  
