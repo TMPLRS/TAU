@@ -6831,6 +6831,11 @@ end
 send(msg.chat_id_, msg.id_,first_name..'\n'..last_name) 
 end,nil)
 end 
+if text == "ايديي"  then 
+tdcli_function({ID="GetUser",user_id_=msg.sender_user_id_},function(extra,result,success)
+if result.first_name_  then
+user_id = '🔖┋ايديك  ~⪼ {`'..(result.user_id_)..'`}'
+end
 ----------------------------------------------------------------------------
 if text==('عدد الكروب') and Mod(msg) then  
 if msg.can_be_deleted_ == false then 
