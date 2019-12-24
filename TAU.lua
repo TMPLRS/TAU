@@ -1936,6 +1936,11 @@ end
 database:set(bot_id..'Num:Add:Bot',Num) 
 send(msg.chat_id_, msg.id_,'📌┋تم تعيين عدد الاعضاء سيتم تفعيل المجموعات التي اعضائها اكثر من  >> {'..Num..'} عضو')
 end
+if text and text:match('^وضع عدد الكانسر (%d+)$') and SudoBot(msg) then
+local Num = text:match('^وضع عدد الكانسر (%d+)$')
+database:set(bot_id..'Num:add:kansers',Num)
+send(msg.chat_id_, msg.id_,'📌┋تم تعينن عدد الاحرف')
+end
 if text == 'تحديث السورس' and SudoBot(msg) then 
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
@@ -2871,6 +2876,7 @@ send(msg.chat_id_, msg.id_, usertext..status)
 end;end,nil)
 return false
 end
+
 if text == ("الغاء العام") and msg.reply_to_message_id_ and SudoBot(msg) then
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
@@ -3605,21 +3611,6 @@ status  = '\n🔰┋تم تنزيله من المدراء'
 send(msg.chat_id_, msg.id_, usertext..status)
 end;end,nil)
 return false
-end
-
-if text == ("رفع الادمنيه") then
-local function cb(extra,result,success)
-local list = result.members_
-mod = '📊┇ تم رفع ادمنيه المجموعه في البوت\n'
-local n = 0
-for k,v in pairs(list) do
-n = (n + 1)
-local username =  database:get(bot_id.."mod" .. v)
-database:sadd(mod, v.user_id_)
-end
-send(msg.chat_id_, msg.id_, 1, mod, 1, 'html')
-end
-bot.channel_get_admins(msg.chat_id_,cb)
 end
 ------------------------------------------------------------------------
 if text == 'مسح الادمنيه' and Manager(msg) then
