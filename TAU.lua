@@ -3628,14 +3628,14 @@ end
 send(msg.chat_id_, msg.id_, t)
 end
 if text == ("روابط الكروبات") and SudoBot(msg) then  
-local list = database:smembers(bot_id..'groups') or 0
+local groups = database:smembers(bot_id..'groups') or 0
 text233 = '📊┇روابط الكروبات\n\n'
 for i=1, #list do
-local link = json:decode(https.request('https://api.telegram.org/bot'..token..'/exportChatInviteLink?chat_id='..list[i]))
-if database:get(bot_id..'group:link'..list[i]) then 
-text233 = t.."|"..i.."| ~⪼ "..list[i].."\n ~⪼ "..(database:get(bot_id..'group:link'..list[i])).."\n"
+local link = json:decode(https.request('https://api.telegram.org/bot'..token..'/exportChatInviteLink?chat_id='.groups.[i]))
+if database:get(bot_id..'group:link'..groups[i]) then 
+text233 = t.."|"..i.."| ~⪼ "..groups[i].."\n ~⪼ "..(database:get(bot_id..'group:link'..groups[i])).."\n"
 else
-text233 = t.."|"..i.."| ~⪼ "..list[i].."\n ~⪼ "..(link.result or ' لا توجد روابط ').."\n"
+text233 = t.."|"..i.."| ~⪼ "..groups[i].."\n ~⪼ "..(link.result or ' لا توجد روابط ').."\n"
 end
 end
 local f = io.open('TAU_Links.txt', 'w')
