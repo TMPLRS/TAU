@@ -1769,9 +1769,12 @@ DeleteMessage(msg.chat_id_,{[0] = msg.id_})
 end
 end
 if text == 'تفعيل' and Sudo(msg) then
-local ch = json:decode(https.request('http://th3evo0p7p.cf/Ali/u/?user_id='..msg.chat_id_))
-if ch.result == false then
-send(msg.chat_id_, msg.id_,' • اهلا بك عزيزي 🔱 •\n• لايمكنك استخدام البوت ✅ •\n • عليك الاشتراك في القناة 🔽 •\n• @TAUTEAM')
+if AddChannel(msg.sender_user_id_) == false then
+local textchuser = database:get(bot_id..'text:ch:user')
+if textchuser then
+send(msg.chat_id_, msg.id_,'['..textchuser..']')
+else
+send(msg.chat_id_, msg.id_,' • اهلا بك عزيزي 🔱 •\n• لايمكنك استخدام البوت ✅ •\n • عليك الاشتراك في القناة 🔽 •\n• ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
