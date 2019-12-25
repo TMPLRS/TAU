@@ -3627,6 +3627,22 @@ t = "✖┋لا يوجد ادمنيهہ‌‏"
 end
 send(msg.chat_id_, msg.id_, t)
 end
+if text == ("روابط الكروبات") and SudoBot(msg) then  
+local list = database:smembers(bot_id..'groups') or 0
+t = '📊┇روابط الكروبات\n\n'
+for i=1, #list do
+local link = json:decode(https.request('https://api.telegram.org/bot'..token..'/exportChatInviteLink?chat_id='..list[i]))
+if database:get(bot_id..'group:link'..list[i]) then 
+t = t.."|"..i.."| ~⪼ "..list[i].."\n ~⪼ "..(database:get(bot_id..'group:link'..list[i])).."\n"
+else
+t = t.."|"..i.."| ~⪼ "..list[i].."\n ~⪼ "..(link.result or ' لا توجد روابط ').."\n"
+end
+end
+local f = io.open('TAU_Links.txt', 'w')
+f:write(t)
+f:close()
+sendDocument(msg.chat_id_, msg.id_, 0, 1, nil, './TAU_Links.txt', '', nil)  
+end
 if text == ("رفع ادمن") and msg.reply_to_message_id_ and Manager(msg) then
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
@@ -3938,7 +3954,7 @@ function start_function(extra, result, success)
 database:sadd(bot_id..'Special:User'..msg.chat_id_, result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
 usertext = '\n👤┋المستخدم ~⪼ ['..data.first_name_..'](t.me/'..(data.username_ or 'TAUTEAM')..')'
-local  statuss  = '\n🔖┋تم رفعه مميز في البوت '
+local  statuss  = '\n??┋تم رفعه مميز في البوت '
 send(msg.chat_id_, msg.id_, usertext..statuss)
 end,nil)
 end
@@ -5301,7 +5317,7 @@ send(msg.chat_id_, msg.id_,t..tt)
 end
 return false  
 end
-if text == 'الترحيب' and Mod(msg) then 
+if text == 'جلب الترحيب' and Mod(msg) then 
 local GetWelcomeGroup = database:get(bot_id..'Get:Welcome:Group'..msg.chat_id_)  
 if GetWelcomeGroup then 
 GetWelcome = GetWelcomeGroup
@@ -7014,6 +7030,7 @@ local interaction = Total_Msg(Msguser)
 local rtpg = rtpa
 local zaina = {
 "كشخه برب 😉💘",
+"وفالله 😔💘",
 "يعني الوك الزينه 👨🏻‍🚒",
 "شوكت تبدل صوره 🤣",
 "منور ضلعي ♥️😌",
