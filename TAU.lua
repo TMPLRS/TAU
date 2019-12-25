@@ -5346,7 +5346,6 @@ send(msg.chat_id_, msg.id_,'🗑┋تم ازالة ترحيب المجموعه')
 end
 return false  
 end
-
 if text == "مسح قائمه المنع" and Mod(msg) then   
 local list = database:smembers(bot_id.."List:Filter"..msg.chat_id_)  
 for k,v in pairs(list) do  
@@ -5356,7 +5355,6 @@ database:srem(bot_id.."List:Filter"..msg.chat_id_,v)
 end  
 send(msg.chat_id_, msg.id_,"🗑┋تم مسح قائمه المنع")  
 end
-
 if text == "قائمه المنع" and Mod(msg) then   
 local list = database:smembers(bot_id.."List:Filter"..msg.chat_id_)  
 t = "\n📃┋قائمة المنع \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n"
@@ -5369,16 +5367,6 @@ t = "✖┋لا يوجد كلمات ممنوعهہ‌‏"
 end  
 send(msg.chat_id_, msg.id_,t)  
 end  
-if text == 'منع' and msg.reply_to_message_id_ == 0 and Mod(msg) then       
-function cb(a,b,c) 
-text = '📮┇ تم منع '
-if b.content_.sticker_ then
-local idsticker = b.content_.sticker_.set_id_
-database:sadd(bot_id.."filtersteckr"..msg.chat_id_,idsticker)
-text = 'الملصق'
-sendtext(msg.chat_id_, msg.id_,text..'( '..text..' ) بنجاح لن يتم ارسالها مجددا')  
-return false
-end
 if text and text == 'منع' and msg.reply_to_message_id_ == 0 and Mod(msg) then       
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
