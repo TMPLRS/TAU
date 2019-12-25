@@ -6013,6 +6013,36 @@ msgm = msgm - 1048576
 end
 send(msg.chat_id_,msg.id_,'☑️| تم حذف {'..num..'}')  
 end
+if text == ("طرد المتروكين") then
+local txt = {string.match(text, "^(طرد المتروكين)$")}
+local function getChatId(chat_id)
+local chat = {}
+local chat_id = tostring(chat_id)
+if chat_id:match('^-100') then
+local channel_id = chat_id:gsub('-100', '')
+chat = {ID = channel_id, type = 'channel'}
+else
+local group_id = chat_id:gsub('-', '')
+chat = {ID = group_id, type = 'group'}
+end
+return chat
+end
+local function check_deactive(arg, data)
+for k, v in pairs(data.members_) do
+local function clean_cb(arg, data)
+if data.type_.ID == "UserTypeGeneral" then
+if data.status_.ID == "UserStatusEmpty" then
+bot.changeChatMemberStatus(msg.chat_id_, data.id_, "Kicked")
+end
+end
+end
+bot.getUser(v.user_id_, clean_cb)
+end
+text = '☑┇تم طرد الحسابات المتروكة من المجموعة'
+send(msg.chat_id_, msg.id_, 1, text, 1, 'md')
+end
+tdcli_function ({ID = "GetChannelMembers",channel_id_ = getChatId(msg.chat_id_).ID,offset_ = 0,limit_ = 5000}, check_deactive, nil)
+end
 ----------------------------------------------------------
 if text == "تغير اسم البوت" or text == "تغيير اسم البوت" then 
 if SudoBot(msg) then
