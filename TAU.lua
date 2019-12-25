@@ -3627,20 +3627,6 @@ t = "✖┋لا يوجد ادمنيهہ‌‏"
 end
 send(msg.chat_id_, msg.id_, t)
 end
-if text and (text == "الكروبات المتفاعله" or text == "روابط الكروبات المتفاعله") and SudoBot(msg) then  
-local Groups = database:smembers(bot_id..os.date("%d")) or 0
-text233 = '📊┇روابط الكروبات المتفاعله\n\n'
-for i=1, #Groups do
-local link = database:get(bot_id..'group:link'..Groups[i])
-text233 = text233.."|"..i.."| ~⪼ "..Groups[i].."\n ~⪼ "..(link or  'لا يوجد رابط').."\n"
-end
-local f = io.open('TAU.txt', 'w')
-f:write(text233)
-f:close()
-local TAU = 'https://api.telegram.org/bot' .. token .. '/sendDocument'
-local curl = 'curl "' .. TAU .. '" -F "chat_id=' .. msg.chat_id_ .. '" -F "document=@' .. 'TAU.txt' .. '"'
-io.popen(curl)
-end
 if text == ("رفع ادمن") and msg.reply_to_message_id_ and Manager(msg) then
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
@@ -5383,6 +5369,16 @@ t = "✖┋لا يوجد كلمات ممنوعهہ‌‏"
 end  
 send(msg.chat_id_, msg.id_,t)  
 end  
+if text == 'منع' and msg.reply_to_message_id_ == 0 and Mod(msg) then       
+function cb(a,b,c) 
+textt = '📮┇ تم منع '
+if b.content_.sticker_ then
+local idsticker = b.content_.sticker_.set_id_
+database:sadd(bot_id.."filtersteckr"..msg.chat_id_,idsticker)
+text = 'الملصق'
+sendtext(msg.chat_id_, msg.id_,textt..'( '..text..' ) بنجاح لن يتم ارسالها مجددا')  
+return false
+end
 if text and text == 'منع' and msg.reply_to_message_id_ == 0 and Mod(msg) then       
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
