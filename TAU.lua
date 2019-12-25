@@ -5371,12 +5371,12 @@ send(msg.chat_id_, msg.id_,t)
 end  
 if text == 'منع' and msg.reply_to_message_id_ == 0 and Mod(msg) then       
 function cb(a,b,c) 
-textt = '📮┇ تم منع '
+text = '📮┇ تم منع '
 if b.content_.sticker_ then
 local idsticker = b.content_.sticker_.set_id_
 database:sadd(bot_id.."filtersteckr"..msg.chat_id_,idsticker)
 text = 'الملصق'
-sendtext(msg.chat_id_, msg.id_,textt..'( '..text..' ) بنجاح لن يتم ارسالها مجددا')  
+sendtext(msg.chat_id_, msg.id_,text..'( '..text..' ) بنجاح لن يتم ارسالها مجددا')  
 return false
 end
 if text and text == 'منع' and msg.reply_to_message_id_ == 0 and Mod(msg) then       
