@@ -5225,25 +5225,25 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' • اهلا بك عزيزي 🔱 •\n• لايمكنك استخدام البوت ✅ •\n • عليك الاشتراك في القناة 🔽 •\n• ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' 🔅┋عذراً عليك الاشتراك في القناة\n 📌┋ اشترك هنا ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
-send(msg.chat_id_,msg.id_,"📎️| ارسل رابط المجموعه او رابط قناة المجموعه")
-database:setex(bot_id.."Set:Priovate:GroupLink"..msg.chat_id_..""..msg.sender_user_id_,120,true) 
+send(msg.chat_id_,msg.id_,"📎| ارسل رابط المجموعهہ‌‏ او رابط قناة المجموعهہ‌‏")
+database:setex(bot_id.."Set:Priovate:Group:Link"..msg.chat_id_..""..msg.sender_user_id_,120,true) 
 return false
 end
 end
 if text == "الرابط" or text == "رابط الكروب" then 
 local link = database:get(bot_id.."Private:Group:Link"..msg.chat_id_)            
 if link then                              
-send(msg.chat_id_,msg.id_,'⛑️| *Group Link -*\n ['..link..']')                          
+send(msg.chat_id_,msg.id_,'*⛑️| Group Link -*\n ['..link..']')                          
 else                
 local linkgpp = json:decode(https.request('https://api.telegram.org/bot'..token..'/exportChatInviteLink?chat_id='..msg.chat_id_))
 if linkgpp.ok == true then 
-linkgp = '⛑️| *Group Link -*\n ['..linkgpp.result..']'
+linkgp = '*⛑️| Group Link -*\n ['..linkgpp.result..']'
 else
-linkgp = '✖️| لا يوجد رابط ارسل ضع رابط'
+linkgp = '✖| لا يوجد رابط ارسل ضع رابط'
 end  
 send(msg.chat_id_, msg.id_,linkgp)              
 end            
@@ -5255,11 +5255,11 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' • اهلا بك عزيزي 🔱 •\n• لايمكنك استخدام البوت ✅ •\n • عليك الاشتراك في القناة 🔽 •\n• ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' 🔅┋عذراً عليك الاشتراك في القناة\n 📌┋ اشترك هنا ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
-send(msg.chat_id_,msg.id_,"🗑️| تم مسح الرابط ")           
+send(msg.chat_id_,msg.id_,"🗑| تم مسح الرابط ")           
 database:del(bot_id.."Private:Group:Link"..msg.chat_id_) 
 return false      
 end
