@@ -6813,7 +6813,7 @@ local edit = tonumber(database:get(bot_id..'edits'..msg.chat_id_..result.sender_
 local rtp = Rutba(result.sender_user_id_,msg.chat_id_)
 local username = ('[@'..data.username_..']' or 'لا يوجد')
 local iduser = result.sender_user_id_
-send(msg.chat_id_, msg.id_,'🎟¦ الايـدي • (`'..iduser..'`)\n🎭¦ المعـرف • `'..username..'`\n👮‍♀️¦ الرتـبه • '..rtp..'\n🗑¦ عدد السحكات • (`'..edit..'`)\n💌¦ عدد الرسائل • (`'..Msguser..'`)\n💎¦ عدد المجوهرات • (`'..NUMPGAME..'`)\n👤¦ عدد الجهات • (`'..Contact..'`)\nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ')
+send(msg.chat_id_, msg.id_,'🎟┋ ايديهہ‌‏ » ('..iduser..')\n🎫┋ معرفهہ‌‏ » ('..username..')\n👨‍🎓┋ رتبتهہ‌‏ » ('..rtp..')\n🗑┋ تعديلاتهہ‌‏ » ('..edit..')\n🤹‍♂️┋ نقاطهہ‌‏ » ('..NUMPGAME..')\n📞┋ جهاتهہ‌‏ » ('..Contact..')\n📨┋ رسائلهہ‌‏ » ('..Msguser..')')
 end,nil)
 end
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, start_function, nil)
@@ -6830,10 +6830,10 @@ local edit = tonumber(database:get(bot_id..'edits'..msg.chat_id_..result.id_) or
 local rtp = Rutba(result.id_,msg.chat_id_)
 local username = ('[@'..data.username_..']' or 'لا يوجد')
 local iduser = result.id_
-send(msg.chat_id_, msg.id_,'🎟¦ الايـدي • (`'..iduser..'`)\n🎭¦ المعـرف • `'..username..'`\n👮‍♀️¦ الرتـبه • '..rtp..'\n🗑¦ عدد السحكات • (`'..edit..'`)\n💌¦ عدد الرسائل • (`'..Msguser..'`)\n💎¦ عدد المجوهرات • (`'..NUMPGAME..'`)\n👤¦ عدد الجهات • (`'..Contact..'`)\nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ')
+send(msg.chat_id_, msg.id_,'🎟┋ ايديهہ‌‏ » ('..iduser..')\n🎫┋ معرفهہ‌‏ » ('..username..')\n👨‍🎓┋ رتبتهہ‌‏ » ('..rtp..')\n🗑┋ تعديلاتهہ‌‏ » ('..edit..')\n🤹‍♂️┋ نقاطهہ‌‏ » ('..NUMPGAME..')\n📞┋ جهاتهہ‌‏ » ('..Contact..')\n📨┋ رسائلهہ‌‏ » ('..Msguser..')')
 end,nil)
 else
-send(msg.chat_id_, msg.id_,'✖️| المعرف غير صحيح ')
+send(msg.chat_id_, msg.id_,'✖┋ المعرف غير صحيح ')
 end
 end
 tdcli_function ({ID = "SearchPublicChat",username_ = username}, start_function, nil)
