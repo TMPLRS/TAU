@@ -7518,7 +7518,7 @@ end
 database:set(bot_id..'Set:Sma'..msg.chat_id_,true)
 return false
 end 
-if text == 'الاسرع' or tect == 'ترتيب' then
+if text == 'ترتيب' or tect == 'ترتيب' then
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
