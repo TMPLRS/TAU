@@ -6877,38 +6877,6 @@ end,nil)
 end,nil)
 end 
 ----------------------------------------------------------------------------
-if text ==('رفع الادمنيه') and is_monsh(msg) then
-tdcli_function ({
-ID = "GetChannelMembers",
-channel_id_ = getChatId(msg.chat_id_).ID,
-filter_ = {ID = "ChannelMembersAdministrators"},offset_ = 0,limit_ = 100
-},function(arg,data) 
-local num2 = 0
-local admins = data.members_
-for i=0 , #admins do
-if data.members_[i].bot_info_ == false and data.members_[i].status_.ID == "ChatMemberStatusEditor" then
-database:sadd(bot_id..'mods:'..msg.chat_id_,admins[i].user_id_) 
-num2 = num2 + 1
-tdcli_function ({ID = "GetUser",user_id_ = admins[i].user_id_
-},function(arg,b) 
-if b.username_ == true then
-database:set(bot_id.."user:Name"..b.id_,"@"..b.username_)
-end
-if b.first_name_ == false then
-database:srem(bot_id..'mods:'..msg.chat_id_,admins[i].user_id_) 
-end
-end,nil)   
-else
-database:srem(bot_id..'mods:'..msg.chat_id_,admins[i].user_id_) 
-end
-end
-if num2 == 0 then
-send(msg.chat_id_, msg.id_, 1, '*⚠️┇لا توجد ادمنية ليتم رفعهم*\n✓', 1, 'md') 
-else
-send(msg.chat_id_, msg.id_, 1, '*✔️┇تمت ترقية •⊱ '..num2..' ⊰• من ادمنية المجموعه*\n✓', 1, 'md') 
-end
-end,nil)   
-end
 if text == 'اطردني' or text == 'طردني' then
 if not database:get(bot_id..'Cick:Me'..msg.chat_id_) then
 if Can_or_NotCan(msg.sender_user_id_, msg.chat_id_) == true then
