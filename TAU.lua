@@ -6139,8 +6139,8 @@ end
 return false
 end
 
-if text == ""..(database:get(bot_id..'Name:Bot') or 'العالمي').."" then  
-Namebot = (database:get(bot_id..'Name:Bot') or 'العالمي')
+if text == ""..(database:get(bot_id..'Name:Bot') or 'تاو').."" then  
+Namebot = (database:get(bot_id..'Name:Bot') or 'تاو')
 local TAU_Msg = {
 'كافي ترى كرهت اسمي 😤',
 'اهو اجوا الملطلطين 😪😹',
@@ -6727,7 +6727,7 @@ end
 end
 end
 ----------------------------------------------------------------------------
-if text == ""..(database:get(bot_id..'Name:Bot') or 'العالمي').." غادر" or text == 'غادر' then  
+if text == ""..(database:get(bot_id..'Name:Bot') or 'تاو').." غادر" or text == 'غادر' then  
 if Sudo(msg) and not database:get(bot_id..'Left:Bot'..msg.chat_id_)  then 
 tdcli_function ({ID = "ChangeChatMemberStatus",chat_id_=msg.chat_id_,user_id_=bot_id,status_={ID = "ChatMemberStatusLeft"},},function(e,g) end, nil) 
 send(msg.chat_id_, msg.id_,'☑| تم مغادرة المجموعه') 
@@ -6736,7 +6736,7 @@ end
 return false  
 end
 if text == 'بوت' then
-Namebot = (database:get(bot_id..'Name:Bot') or 'العالمي')
+Namebot = (database:get(bot_id..'Name:Bot') or 'تاو')
 send(msg.chat_id_, msg.id_,'اسمي ['..Namebot..'] 😌👌') 
 end
 ----------------------------------------------------------------------------
@@ -8706,7 +8706,7 @@ if (text and text == "تفعيل اوامر التحشيش") then
 send(msg.chat_id_, msg.id_, '☑┇تم تفعيل اوامر التحشيش')
 database:del(bot_id.."Fun_Bots:"..msg.chat_id_)
 end
-local Name_Bot = (database:get(bot_id..'Name:Bot') or 'العالمي')
+local Name_Bot = (database:get(bot_id..'Name:Bot') or 'تاو')
 if not database:get(bot_id.."Fun_Bots:"..msg.chat_id_) then
 if text ==  ""..Name_Bot..' شنو رئيك بهذا' and tonumber(msg.reply_to_message_id_) > 0 then     
 function FunBot(extra, result, success) 
@@ -8729,7 +8729,7 @@ if text and text:match('^'..Name_Bot..' ') then
 data.message_.content_.text_ = data.message_.content_.text_:gsub('^'..Name_Bot..' ','')
 end
 -----------------ZAINALABDEEN___________________
-local Name_Bot = (database:get(bot_id..'Name:Bot') or 'العالمي')
+local Name_Bot = (database:get(bot_id..'Name:Bot') or 'تاو')
 if not database:get(bot_id.."Fun_Bots:"..msg.chat_id_) then
 if text ==  ""..Name_Bot..' بوسه' or text ==  ""..Name_Bot..' مصه' and tonumber(msg.reply_to_message_id_) > 0 then     
 function FunBot(extra, result, success) 
