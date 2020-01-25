@@ -1342,7 +1342,7 @@ tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,dat
 if data.username_ ~= false then
 send(msg.chat_id_,0,"💁🏻‍♂️| المستخدم : {["..data.first_name_.."](T.ME/"..data.username_..")}\n📛| ["..TAU_Msg.."] \n") 
 else
-send(msg.chat_id_,0,"💁🏻‍♂️| المستخدم : {["..data.first_name_.."](T.ME/TAU)}\n📛| ["..TAU_Msg.."] \n") 
+send(msg.chat_id_,0,"💁🏻‍♂️| المستخدم : {["..data.first_name_.."](t.me/TAUTeam)}\n📛| ["..TAU_Msg.."] \n") 
 end
 end,nil)   
 DeleteMessage(msg.chat_id_, {[0] = msg.id_})     
@@ -1777,7 +1777,7 @@ tdcli_function({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data
 if data.username_ ~= false then
 send(msg.chat_id_,0, "💁🏻‍♂️| المستخدم ✓ {[@"..data.username_.."]}\n📛| عذراً لايمكنك ارسل الملصق في المجموعه \n" ) 
 else
-send(msg.chat_id_,0, "💁🏻‍♂️| المستخدم ✓ {["..data.first_name_.."](T.ME/TAU)}\n📛| عذراً لايمكنك ارسل الملصق في المجموعه \n" ) 
+send(msg.chat_id_,0, "💁🏻‍♂️| المستخدم ✓ {["..data.first_name_.."](t.me/TAUTeam)}\n📛| عذراً لايمكنك ارسل الملصق في المجموعه \n" ) 
 end
 end,nil)   
 DeleteMessage(msg.chat_id_,{[0] = msg.id_})       
@@ -1794,7 +1794,7 @@ tdcli_function({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data
 if data.username_ ~= false then
 send(msg.chat_id_,0,"💁🏻‍♂️| المستخدم ✓ {[@"..data.username_.."]}\n📛| عذراً لايمكنك ارسل الصوره في المجموعه \n" ) 
 else
-send(msg.chat_id_,0,"💁🏻‍♂️| المستخدم ✓ {["..data.first_name_.."](T.ME/TAU)}\n📛| عذراً لايمكنك ارسل الصوره في المجموعه \n") 
+send(msg.chat_id_,0,"💁🏻‍♂️| المستخدم ✓ {["..data.first_name_.."](t.me/TAUTeam)}\n📛| عذراً لايمكنك ارسل الصوره في المجموعه \n") 
 end
 end,nil)   
 DeleteMessage(msg.chat_id_,{[0] = msg.id_})       
@@ -1811,7 +1811,7 @@ tdcli_function({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data
 if data.username_ ~= false then
 send(msg.chat_id_,0,"💁🏻‍♂️| المستخدم ✓ {[@"..data.username_.."]}\n📛| عذراً لايمكنك ارسل المتحركه في المجموعه \n") 
 else
-send(msg.chat_id_,0,"💁🏻‍♂️| المستخدم ✓ {["..data.first_name_.."](T.ME/TAU)}\n📛| عذراً لايمكنك ارسل المتحركه في المجموعه \n" ) 
+send(msg.chat_id_,0,"💁🏻‍♂️| المستخدم ✓ {["..data.first_name_.."](t.me/TAUTeam)}\n📛| عذراً لايمكنك ارسل المتحركه في المجموعه \n" ) 
 end
 end,nil)   
 DeleteMessage(msg.chat_id_,{[0] = msg.id_})       
@@ -2050,7 +2050,7 @@ Text = [[
 
 🦁┇[قناة السورس](https://t.me/joinchat/AAAAAEvN2TjHUHaAd8iiMA)
 
-📁┇[كليشه التنصيب ](https://t.me/TAUTEAM/71)
+📁┇[كليشه التنصيب ](https://t.me/TAUTeamTEAM/71)
 
 📮┇[لـ تواصل ، 💌](https://t.me/ta2bot)
 
@@ -5567,7 +5567,7 @@ end
 if text and database:get(bot_id..'Set:Text:Dev:Bot'..msg.chat_id_) then
 if text == 'الغاء' then 
 database:del(bot_id..'Set:Text:Dev:Bot'..msg.chat_id_)
-send(msg.chat_id_, msg.id_,'🌀| تم الغاء حفظ كليشة المطور')
+send(msg.chat_id_, msg.id_,'??| تم الغاء حفظ كليشة المطور')
 return false
 end
 database:set(bot_id..'Text:Dev:Bot',text)
@@ -8282,7 +8282,7 @@ Text_Games = [[
 🎮| لعبة حزوره <> حزوره
 🎮| لعبة معاني <> معاني
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
-📡| [Channel TAU](t.me/TAU)
+📡| [Channel TAU](t.me/TAUTeam)
 ]]
 send(msg.chat_id_, msg.id_,Text_Games) 
 end
@@ -8316,7 +8316,7 @@ Text = [[
 
 🔧┇م6 » اوآمر مطور اساسي
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
-📡┇[Channel TAU](t.me/TAU)
+📡┇[Channel TAU](t.me/TAUTeam)
 ]]
 send(msg.chat_id_, msg.id_,Text) 
 return false
@@ -8372,7 +8372,7 @@ Text = [[
 🔖┇ الفارسيه
 🔖┇ الكلمات السيئه
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
-📡┇[Channel TAU](t.me/TAU)
+📡┇[Channel TAU](t.me/TAUTeam)
 ]]
 send(msg.chat_id_, msg.id_,Text) 
 return false
@@ -8423,7 +8423,7 @@ Text = [[
 
 ♦️┇ضع تكرار + العدد
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
-📡┇[Channel TAU](t.me/TAU)
+📡┇[Channel TAU](t.me/TAUTeam)
 ]]
 send(msg.chat_id_, msg.id_,Text) 
 return false
@@ -8483,7 +8483,7 @@ Text = [[
 🔍┇تاك للكل
 🔍┇تنزيل الكل
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
-📡┇[Channel TAU](t.me/TAU)
+📡┇[Channel TAU](t.me/TAUTeam)
 ]]
 send(msg.chat_id_, msg.id_,Text) 
 return false
@@ -8538,7 +8538,7 @@ Text = [[
 🔅┇ تعطيل/تفعيل الايدي
 🔅┇ تعطيل/تفعيل اطردني
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
-📡┇[Channel TAU](t.me/TAU)
+📡┇[Channel TAU](t.me/TAUTeam)
 ]]
 send(msg.chat_id_, msg.id_,Text) 
 return false
@@ -8585,7 +8585,7 @@ Text = [[
 ⚔┇ تفعيل/تعطيل الرفع
 ⚔┇ تفعيل/تعطيل الردود
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
-📡┇[Channel TAU](t.me/TAU)
+📡┇[Channel TAU](t.me/TAUTeam)
 ]]
 send(msg.chat_id_, msg.id_,Text) 
 return false
@@ -8653,7 +8653,7 @@ Text = [[
 📥┇ نسخه احتياطيه للمجموعات
 📤┇ رفع النسخه الاحتياطيه
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
-📡┇[Channel TAU](t.me/TAU)
+📡┇[Channel TAU](t.me/TAUTeam)
 ]]
 send(msg.chat_id_, msg.id_,Text) 
 return false
@@ -8981,7 +8981,7 @@ tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,
 if data.username_ ~= false then
 send(msg.chat_id_,0,"🗣| المستخدم : {["..data.first_name_.."](T.ME/"..data.username_..")}\n📛| ["..TAUbot.."] \n") 
 else
-send(msg.chat_id_,0,"🗣| المستخدم : {["..data.first_name_.."](T.ME/TAU)}\n📛| ["..TAUbot.."] \n") 
+send(msg.chat_id_,0,"🗣| المستخدم : {["..data.first_name_.."](t.me/TAUTeam)}\n📛| ["..TAUbot.."] \n") 
 end
 end,nil)   
 DeleteMessage(msg.chat_id_,{[0] = data.message_id_}) 
